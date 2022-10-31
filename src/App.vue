@@ -1,9 +1,5 @@
 <template>
   <MainNavbar />
-  <p>
-    This will be the coolest portfolio in the future!!!
-  </p>
-  <img src="./assets/gif.png"/>
 </template>
 
 <script>
@@ -18,7 +14,9 @@ export default {
 
 <style>
 body {
-  background-color:black;
+  width: 100%;
+  height: 100%;
+  background-image: url('@/assets/background-dark.svg')
 }
 
 #app {
@@ -26,17 +24,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
-  background-color:black;
-}
-
-p {
-  margin-top: 50px;
-}
-
-img {
-  margin-top: 40px;
-  width: 400px;
-  height: 400px;
 }
 </style>
