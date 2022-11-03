@@ -3,7 +3,7 @@ import Main from '@/views/Main.vue'
 import About from '@/views/About.vue'
 import Contact from '@/views/Contact.vue'
 import Starsheep from '@/views/Starsheep.vue'
-import Work from '@/views/Work.vue'
+import WorkPage from '@/views/WorkPage.vue'
 
 const routes = [
   {
@@ -14,7 +14,7 @@ const routes = [
   {
     path: "/work",
     name: "Work",
-    component: Work,
+    component: WorkPage,
   },
   {
     path: "/contact",
