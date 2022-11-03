@@ -1,5 +1,7 @@
 <template>
-  <MainNavbar />
+<div class="content" :class="`${mode}-bg`">
+  <MainNavbar/>
+</div>
 </template>
 
 <script>
@@ -8,25 +10,40 @@ export default {
   name: 'App',
   components: {
     MainNavbar
+  },
+  computed: {
+    mode() {
+      return this.$route.name === 'Main' ? 'dark' : 'light'
+    }
   }
 }
 </script>
 
 <style>
-html {
-  font-family: ".ClashDisplay";
-}
-
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+}
+
+.content {
+  width: 100%;
+  height:100%;
+}
+
+.light-bg {
+  background-color: #F6F5EC !important;
+}
+
+.dark-bg {
   background-image: url('@/assets/background-dark.svg')
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "ClashDisplay-Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  width:100%;
+  height:100%;
 }
 </style>

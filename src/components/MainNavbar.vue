@@ -9,7 +9,21 @@
       align="center"
       spacing="large"
     >
-      <img class="px-2" src="@/assets/logo-light.svg" alt="Logo"/>
+      <router-link to="/">
+        <img 
+          v-if="$root.mode === 'light'"
+          class="px-2" 
+          src="@/assets/logo-dark.svg" 
+          alt="Logo"
+        />
+        <img 
+          v-else
+          class="px-2" 
+          src="@/assets/logo-light.svg" 
+          alt="Logo"
+        />
+      </router-link>
+
       <MainNavbarItem 
         v-for="item in navbarItems"
         :key="item.id"
@@ -50,6 +64,9 @@ export default {
           to: '/starsheep',
         },                      
       ]
+    },
+    logoUrl() {
+      return this.$root.mode === 'light' ? '@/assets/logo-dark.svg' : '@/assets/logo-light.svg'
     }
   }
 }

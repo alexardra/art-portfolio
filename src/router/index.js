@@ -1,4 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router';
+import Main from '@/views/Main.vue'
 import About from '@/views/About.vue'
 import Contact from '@/views/Contact.vue'
 import Starsheep from '@/views/Starsheep.vue'
@@ -7,7 +8,8 @@ import Work from '@/views/Work.vue'
 const routes = [
   {
     path: '/',
-    redirect: '/work',
+    name: 'Main',
+    component: Main,
   },  
   {
     path: "/work",

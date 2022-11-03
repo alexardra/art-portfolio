@@ -4,7 +4,10 @@
   spacing="none"
 >
   <i v-if="active" class="star-icon"></i>
-  <button>
+  <button :class="[
+    { 'active': active },
+    $root.mode,
+  ]">
     <router-link :to="to">{{ title }}</router-link>
   </button>
 </SideBySide>
@@ -38,8 +41,19 @@ export default {
 <style scoped>
 button {
   background: transparent;
-  color: #F6F5EC;
   border: none;
+}
+
+button.light {
+  color: #242424;
+}
+
+button.active {
+  color:#FC6D5E;
+}
+
+button.dark {
+  color: #F6F5EC;
 }
 
 button a {
