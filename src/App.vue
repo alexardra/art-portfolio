@@ -13,6 +13,10 @@ export default {
 </script>
 
 <style>
+html {
+  font-family: ".ClashDisplay";
+}
+
 body {
   width: 100%;
   height: 100%;

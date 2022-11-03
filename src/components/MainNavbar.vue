@@ -1,5 +1,5 @@
 <template>
-<div class="p-2">
+<div class="px-2 py-3">
   <SideBySide
     align="center"
     justify="between"
@@ -10,42 +10,47 @@
       spacing="large"
     >
       <img class="px-2" src="@/assets/logo-light.svg" alt="Logo"/>
-      <button class="p-2 pb-0">
-        <router-link to="/">Work</router-link>
-      </button>
-      <button class="p-2 pb-0">
-        <router-link to="/about">Me</router-link>
-      </button>
-      <button class="p-2 pb-0">
-        <router-link to="/starsheep">Starsheep</router-link>
-      </button>
+      <MainNavbarItem 
+        v-for="item in navbarItems"
+        :key="item.id"
+        :title="item.title"
+        :to="item.to"
+      />
     </SideBySide>
-    <button class="p-2 pb-0">
-      <router-link to="/contact">Contact</router-link>
-    </button>
+    <MainNavbarItem 
+      title="Contact"
+      to="/contact"
+    />
   </SideBySide>
 </div>
 </template>
 
 <script>
 import SideBySide from '@/core/arrangements/SideBySide.vue'
+import MainNavbarItem from './MainNavbarItem.vue';
 
 export default {
   components: {
     SideBySide,
+    MainNavbarItem,
   },
+  computed: {
+    navbarItems() {
+      return [
+        {
+          title: 'Work',
+          to: '/work',
+        },
+        {
+          title: 'Me',
+          to: '/about',
+        },
+        {
+          title: 'Starsheep',
+          to: '/starsheep',
+        },                      
+      ]
+    }
+  }
 }
 </script>
-
-<style scoped>
-button {
-  background: transparent;
-  color: #F6F5EC;
-  border: none;
-}
-
-button a {
-  color: inherit;
-  text-decoration: none;
-}
-</style>
