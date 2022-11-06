@@ -4,11 +4,11 @@
   spacing="none"
 >
   <i v-if="active" class="star-icon"></i>
-  <button :class="[
+  <button class="pe-0" :class="[
     { 'active': active },
     $root.mode,
   ]">
-    <router-link :to="to">{{ title }}</router-link>
+    <router-link :to="to" :key="$route.path">{{ title }}</router-link>
   </button>
 </SideBySide>
 </template>

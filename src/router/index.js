@@ -4,6 +4,7 @@ import About from '@/views/About.vue'
 import Contact from '@/views/Contact.vue'
 import Starsheep from '@/views/Starsheep.vue'
 import WorkPage from '@/views/WorkPage.vue'
+import ProjectPage from '@/views/ProjectPage.vue'
 
 const routes = [
   {
@@ -15,6 +16,11 @@ const routes = [
     path: "/work",
     name: "Work",
     component: WorkPage,
+  },
+  {
+    path: '/work/:id',
+    name: 'Project',
+    component: ProjectPage,
   },
   {
     path: "/contact",
@@ -30,12 +36,17 @@ const routes = [
     path: "/about",
     name: "About",
     component: About,
-  },    
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+// router.beforeEach((to, from) => {
+//   console.log(to)
+//   console.log(from)
+// })
 
 export default router;

@@ -1,17 +1,14 @@
 <template>
-  <MainNavbar />
-  <MainFooter />
+<AboutSection />
 </template>
 
 <script>
-import MainNavbar from '@/components/MainNavbar.vue'
-import MainFooter from '@/components/MainFooter.vue'
+import AboutSection from '@/components/AboutSection.vue'
 
 export default {
   name: 'App',
   components: {
-    MainNavbar,
-    MainFooter,
+    AboutSection,
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-<div class="px-2 py-3">
+<div class="p-3">
   <SideBySide
     align="center"
     justify="between"
@@ -12,13 +12,13 @@
       <router-link to="/">
         <img 
           v-if="$root.mode === 'light'"
-          class="px-2" 
+          class="pr-2" 
           src="@/assets/logo-dark.svg" 
           alt="Logo"
         />
         <img 
           v-else
-          class="px-2" 
+          class="pr-2" 
           src="@/assets/logo-light.svg" 
           alt="Logo"
         />

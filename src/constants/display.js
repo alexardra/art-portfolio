@@ -18,6 +18,7 @@ export const POSITION_CENTER = 'center'
 export const POSITION_LEFT = 'left'
 export const POSITION_RIGHT = 'right'
 
+export const NONE = 'none'
 export const SIZE_MICRO = 'micro'
 export const SIZE_TINY = 'tiny'
 export const SIZE_SMALL = 'small'
@@ -84,6 +85,7 @@ export default {
   POSITION_CENTER,
   POSITION_RIGHT,
 
+  NONE,
   SIZES,
   SIZE_MICRO,
   SIZE_TINY,

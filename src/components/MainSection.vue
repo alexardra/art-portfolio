@@ -1,41 +1,30 @@
 <template>
-<section class="main px-2 py-3">
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>
-  <div class="container">
-    <div class="content">
-    </div>
-  </div>           
+<section class="main p-3">
+  <ContentTile 
+    v-for="i in tilesCount"
+    :key="`tile-${i}`"
+    class="container"
+  />
 </section>
+<MainFooter />
 </template>
 
 <script>
+import MainFooter from '@/components/MainFooter.vue'
+import ContentTile from './ContentTile.vue'
+
+export default {
+  components: {
+    MainFooter,
+    ContentTile,
+  },
+  props: {
+    tilesCount: {
+      type: Number,
+      default: 8,
+    }
+  },
+}
 </script>
 
 <style scoped>
@@ -47,13 +36,6 @@
 }
 .container {
   flex: 1 0 25%;
-  border: 1px solid #242424;
-  padding: 35px;
-}
-
-.content {
-  background-image: url("@/assets/sample.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  height: 50%;
 }
 </style>
