@@ -14,6 +14,10 @@
   border: 1px solid #242424;
 }
 
+.content:hover {
+  border: 1px solid #FC6D5E;
+}
+
 button {
   border: none;
   margin-top: 30px;
