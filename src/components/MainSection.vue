@@ -1,41 +1,16 @@
 <template>
-<section class="main p-3">
-  <ContentTile 
-    v-for="i in tilesCount"
-    :key="`tile-${i}`"
-    class="container"
-  />
-</section>
+<ContentGrid />
 <MainFooter />
 </template>
 
 <script>
+import ContentGrid from './ContentGrid.vue'
 import MainFooter from '@/components/MainFooter.vue'
-import ContentTile from './ContentTile.vue'
 
 export default {
   components: {
+    ContentGrid,
     MainFooter,
-    ContentTile,
-  },
-  props: {
-    tilesCount: {
-      type: Number,
-      default: 8,
-    }
   },
 }
 </script>
-
-<style scoped>
-.main {
-  width: 100%;
-  height: calc(100vh - 175px);
-  display: flex;
-  flex-wrap: wrap;
-}
-.container {
-  flex: 1 0 25%;
-  height: 50%;
-}
-</style>

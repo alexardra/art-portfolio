@@ -1,5 +1,13 @@
 <template>
-<div class="content">
+<div 
+  class="content"
+  :class="{
+    'top': top,
+    'right': right,
+    'bottom': bottom,
+    'left': left,
+  }"
+>
   <button>
     <router-link to="/work/1" :key="$route.path">Check out this work</router-link>
   </button>
@@ -9,6 +17,29 @@
 </div>
 </template>
 
+<script>
+export default {
+  props: {
+    top: {
+      type: Boolean,
+      default: true,
+    },
+    right: {
+      type: Boolean,
+      default: true,
+    },
+    bottom: {
+      type: Boolean,
+      default: true,
+    },
+    left: {
+      type: Boolean,
+      default: true,
+    } 
+  }
+}
+</script>
+
 <style scoped>
 .content {
   border: 1px solid #242424;
@@ -16,6 +47,36 @@
 
 .content:hover {
   border: 1px solid #FC6D5E;
+}
+
+.top {
+  border-top: 2px solid #242424;
+}
+
+.top:hover {
+  border-top: 2px solid #FC6D5E;
+}
+
+.right {
+  border-right: 2px solid #242424;
+}
+
+.right:hover {
+  border-right: 2px solid #FC6D5E;
+}
+
+.bottom {
+  border-bottom: 2px solid #242424;
+}
+.bottom:hover {
+  border-bottom: 2px solid #FC6D5E;
+}
+.left {
+  border-left: 2px solid #242424;
+}
+
+.left:hover {
+  border-left: 2px solid #FC6D5E;
 }
 
 button {
