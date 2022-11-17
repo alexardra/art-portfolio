@@ -1,51 +1,34 @@
 <template>
-<div class="p-3">
-  <SideBySide
-    align="center"
-    justify="between"
-    width="100%"
+<div class="outer-p d-flex justify-between">
+  <div 
+    class="d-flex align-items-end"
   >
-    <SideBySide
-      align="center"
-      spacing="large"
-    >
-      <router-link to="/">
-        <img 
-          v-if="$root.mode === 'light'"
-          class="pr-2" 
-          src="@/assets/logo-dark.svg" 
-          alt="Logo"
-        />
-        <img 
-          v-else
-          class="pr-2" 
-          src="@/assets/logo-light.svg" 
-          alt="Logo"
-        />
-      </router-link>
-
-      <MainNavbarItem 
-        v-for="item in navbarItems"
-        :key="item.id"
-        :title="item.title"
-        :to="item.to"
+    <router-link to="/" class="h-logo">
+      <img
+        class="w-logo h-logo"
+        src="@/assets/logo-dark.svg" 
+        alt="Logo"
       />
-    </SideBySide>
+    </router-link>
     <MainNavbarItem 
-      title="Contact"
-      to="/contact"
+      v-for="item in navbarItems"
+      :key="item.id"
+      :title="item.title"
+      :to="item.to"
     />
-  </SideBySide>
+  </div>
+  <MainNavbarItem 
+    title="Contact"
+    to="/contact"
+  />  
 </div>
 </template>
 
 <script>
-import SideBySide from '@/core/arrangements/SideBySide.vue'
 import MainNavbarItem from './MainNavbarItem.vue';
 
 export default {
   components: {
-    SideBySide,
     MainNavbarItem,
   },
   computed: {

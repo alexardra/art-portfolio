@@ -1,25 +1,14 @@
 <template>
-<SideBySide
-  align="center"
-  spacing="none"
->
-  <i v-if="active" class="star-icon"></i>
-  <button class="pe-0" :class="[
-    { 'active': active },
-    $root.mode,
-  ]">
+<div class="d-flex container align-items-center" :class="{ 'active': active }">
+  <i v-if="active" class="star-icon inner-mx"></i>
+  <button :class="classes">
     <router-link :to="to" :key="$route.path">{{ title }}</router-link>
   </button>
-</SideBySide>
+</div>
 </template>
 
 <script>
-import SideBySide from '@/core/arrangements/SideBySide.vue'
-
 export default {
-  components: {
-    SideBySide,
-  },
   props: {
     title: {
       type: String,
@@ -34,35 +23,38 @@ export default {
     active() {
       return this.$route.path === this.to
     },
+    classes() {
+      const color = this.$root.mode === 'light' ? 'dark' : 'light'
+      return this.active ? [ 'active', color ] : [ color ]
+    },
   },
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+$w-icon: 10px;
+$h-icon: 10px;
+$padding: 4px;
+$space: 36px;
+
+.container {
+  padding-left: calc($space);
+}
+
+.container.active {
+  padding-left: calc($space - $w-icon - $padding);
+}
+
 button {
   background: transparent;
   border: none;
+  padding:0;
 }
 
-button.light {
-  color: #242424;
-}
-
-button.active {
-  color:#FC6D5E;
-}
-
-button.dark {
-  color: #F6F5EC;
-}
-
-button a {
-  color: inherit;
-  text-decoration: none;
-}
 .star-icon {
-  width: 10px;
-  height: 10px;
+  width: $w-icon;
+  height: $h-icon;
+  margin-bottom: 2px;
   background-image: url('@/assets/star-icon.svg');
   background-repeat: no-repeat;
 }

@@ -1,5 +1,146 @@
 @use 'sass:map';
 
-@import "bootstrap";
-
 @import "arrangements.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;  
+}
+
+.outer-p {
+  padding: 20px;
+}
+
+.inner-mx {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.inner-my {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.outer-mr {
+  margin-right: 20px;
+}
+
+.tile {
+  width: 660px;
+  height: 360px;
+}
+
+$red: #FC6D5E;
+$dark: #242424;
+$light: #F6F5EC;
+
+.bg-dark {
+  background-color: $dark;
+}
+
+.dark {
+  color: $dark;
+}
+
+.bg-light {
+  background-color: $light;
+}
+
+.light {
+  color: $light;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.red {
+  color: $red;
+}
+
+.border-red {
+  border-color: $red !important;
+}
+
+.border-top-red {
+  border-top-color: $red !important;
+}
+
+.border-right-red {
+  border-right-color: $red !important;
+}
+
+.border-bottom-red {
+  border-bottom-color: $red !important;
+}
+
+.border-left-red {
+  border-left-color: $red !important;
+}
+
+$w-video: 640px;
+$h-video: 360px;
+
+.work-tile {
+  width: $w-video;
+  height: $h-video;
+  border: 1px solid $dark;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+$w-logo: 60px;
+$h-logo: 20px;
+
+.w-logo {
+  width: $w-logo;
+}
+
+.h-logo {
+  height: $h-logo;
+}
+
+.main {
+  width: 100%;
+  height: calc(100vh - 175px);
+  display: flex;
+}

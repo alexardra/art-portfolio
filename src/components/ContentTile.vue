@@ -46,7 +46,7 @@ export default {
 }
 
 .content:hover {
-  border: 1px solid #FC6D5E;
+  border: 2px solid #FC6D5E;
 }
 
 .top {

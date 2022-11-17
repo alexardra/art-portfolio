@@ -1,57 +1,40 @@
 <template>
-<div class="main">
-  <div class="first p-3">
-    <h3>Title of project</h3>
+<div class="outer-p main">
+  <div class="outer-mr">
+    <h3 class="red">Title of project</h3>
     <div>Category</div>
   </div>
-
-  <div class="second p-3">
+  <div class="outer-mr">
     Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.
   </div>
-  <div class="third p-3">
-    <ContentTile />
+  <div>
+    <div class="work-tile">
+    </div>
   </div>
 </div>
 </template>
 
-<script>
-import ContentTile from '@/components/ContentTile.vue';
-
-export default {
-  components: {
-    ContentTile,
-  },
-}
-</script>
-
 <style scoped>
-.main {
-  width: 100%;
-  height: calc(100vh - 175px);
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.first {
-  flex: 1 0 20%;
+.main > div {
   justify-content: center;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex: 1 1 0px;
 }
 
-.first h3 {
-  color: #FC6D5E;
-  font-weight: bold;
-}
-.second {
-  flex: 1 0 30%;
-  justify-content: center;
-  display: flex;
+.main > div
+ {
   flex-direction: column;
-  align-items: flex-start;  
+  justify-content: center;
+  align-items: start;
 }
-.third {
-  flex: 1 0 50%;
+
+.main > div:nth-of-type(2) {
+  text-align: left;
+  align-items: center;
+}
+
+.main > div:nth-of-type(3) {
+  flex: 2 2 0px;
+  align-items: end;
 }
 </style>
