@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     mode() {
-      return this.$route.name === 'Main' ? 'dark' : 'light'
+      return this.$route.name === 'MainPage' ? 'dark' : 'light'
     },
     showFooter() {
       return this.$route.fullPath.startsWith('/work')

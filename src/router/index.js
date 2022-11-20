@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import Main from '@/views/Main.vue'
+import MainPage from '@/views/MainPage.vue'
 import About from '@/views/About.vue'
 import Contact from '@/views/Contact.vue'
 import Starsheep from '@/views/Starsheep.vue'
@@ -11,8 +11,8 @@ import projects from '~/projects.json';
 const routes = [
   {
     path: '/',
-    name: 'Main',
-    component: Main,
+    name: 'MainPage',
+    component: MainPage,
   },  
   {
     path: "/work",
