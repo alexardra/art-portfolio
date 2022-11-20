@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue';
-import MainNavbarItem from './MainNavbarItem.vue';
-import LogoFallback from './images/LogoFallback.vue';
+import { defineAsyncComponent } from 'vue'
+import MainNavbarItem from './MainNavbarItem.vue'
+import LogoFallback from './images/LogoFallback.vue'
 
 export default {
   components: {

@@ -1,20 +1,42 @@
 <template>
 <div class="outer-p main">
-  <div class="outer-mr">
-    <h3 class="red">Title of project</h3>
-    <div>Category</div>
-  </div>
-  <div class="outer-mr">
-    Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.
-  </div>
-  <div>
-    <div class="work-tile">
-    </div>
-  </div>
+  <ProjectTitle 
+    :title="project.title"
+    :category="project.category"
+  />
+  <ProjectDescription 
+    :description="project.description"
+  />
+  <ProjectContent
+    :content="project.works"
+  />
 </div>
 </template>
 
+<script>
+import ProjectTitle from '@/components/ProjectTitle.vue'
+import ProjectDescription from '@/components/ProjectDescription.vue'
+import ProjectContent from '@/components/ProjectContent.vue'
+
+export default {
+  components: {
+    ProjectTitle,
+    ProjectDescription,
+    ProjectContent,
+  },
+  props: {
+    project: {
+      type: Object,
+      required: true,
+    }
+  },
+}
+</script>
+
 <style scoped>
+.main {
+  column-gap: 20px;
+}
 .main > div {
   justify-content: center;
   display: flex;
