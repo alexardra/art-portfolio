@@ -1,5 +1,5 @@
 <template>
-<div class="d-flex container align-items-center" :class="{ 'active': active }">
+<div class="d-flex container align-items-end" :class="{ 'active': active }">
   <i v-if="active" class="star-icon inner-mx"></i>
   <button :class="classes">
     <router-link :to="to" :key="$route.path">{{ title }}</router-link>
@@ -24,8 +24,9 @@ export default {
       return this.$route.path === this.to
     },
     classes() {
-      const color = this.$root.mode === 'light' ? 'dark' : 'light'
-      return this.active ? [ 'active', color ] : [ color ]
+      const color = this.$root.mode === 'dark' ? 'light' : 'dark'
+      return this.active ? [ 'red' ] : [ color ]
+
     },
   },
 }
@@ -42,13 +43,14 @@ $space: 36px;
 }
 
 .container.active {
-  padding-left: calc($space - $w-icon - $padding);
+  padding-left: calc($space - $padding - $padding - $w-icon);
 }
 
 button {
   background: transparent;
   border: none;
-  padding:0;
+  padding: 0;
+  line-height: 10px;
 }
 
 .star-icon {

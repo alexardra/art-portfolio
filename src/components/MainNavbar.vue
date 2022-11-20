@@ -4,11 +4,14 @@
     class="d-flex align-items-end"
   >
     <router-link to="/" class="h-logo">
-      <img
-        class="w-logo h-logo"
-        src="@/assets/logo-dark.svg" 
-        alt="Logo"
-      />
+      <Suspense>
+        <component 
+          :is="logoComponent"
+        />
+        <template #fallback>
+          <LogoFallback />
+        </template>
+      </Suspense>
     </router-link>
     <MainNavbarItem 
       v-for="item in navbarItems"
@@ -25,11 +28,14 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue';
 import MainNavbarItem from './MainNavbarItem.vue';
+import LogoFallback from './images/LogoFallback.vue';
 
 export default {
   components: {
     MainNavbarItem,
+    LogoFallback,
   },
   computed: {
     navbarItems() {
@@ -48,9 +54,16 @@ export default {
         },                      
       ]
     },
-    logoUrl() {
-      return this.$root.mode === 'light' ? '@/assets/logo-dark.svg' : '@/assets/logo-light.svg'
-    }
+    logoComponent() {
+      return {
+        'light': defineAsyncComponent(
+          () => import('./images/LogoDark.vue'),
+        ),
+        'dark': defineAsyncComponent(
+          () => import('./images/LogoLight.vue'),
+        ),
+      }[this.$root.mode]
+    },
   }
 }
 </script>
