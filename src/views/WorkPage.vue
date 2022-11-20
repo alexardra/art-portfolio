@@ -6,12 +6,22 @@
     :key="i"
     :class="currentBorderGrid[index]"
   >
+    <WorkPageNavItem
+      v-if="index === 0"
+      v-bind="projects[index]"
+    />
   </div>
 </div>
 </template>
 
 <script>
+import projects from '~/projects.json'
+import WorkPageNavItem from '@/components/WorkPageNavItem.vue'
+
 export default {
+  components: {
+    WorkPageNavItem
+  },
   count: 8,
   borderGrid: [
     ['top', 'bottom', 'left'],
@@ -47,7 +57,14 @@ export default {
 
         return borders
       })
-    }
+    },
+    projects() {
+      return projects.map(project => ({ 
+        id: project.id,
+        url: project.preview,
+        preview: project.title,
+      }))
+    },
   },
   methods: {
     onMouseOver(el) {

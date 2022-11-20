@@ -1,7 +1,10 @@
 <template>
 <div class="d-flex container align-items-end" :class="{ 'active': active }">
   <i v-if="active" class="star-icon inner-mx"></i>
-  <button :class="classes">
+  <button 
+    :class="classes"
+    :style="active ? 'font-weight: 700;': ''"
+  >
     <router-link :to="to" :key="$route.path">{{ title }}</router-link>
   </button>
 </div>
@@ -50,6 +53,8 @@ button {
   border: none;
   padding: 0;
   line-height: 16px;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .star-icon {
