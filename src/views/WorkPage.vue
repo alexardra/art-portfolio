@@ -2,9 +2,9 @@
 <div class="outer-p main">
   <div
     v-for="(i, index) in $options.count"
+    @mouseover="onMouseOver(index)"
     :key="i"
     :class="currentBorderGrid[index]"
-    v-on:mouseover="onMouseOver(index)"
   >
   </div>
 </div>
@@ -54,10 +54,6 @@ export default {
   methods: {
     onMouseOver(el) {
       this.selectedGridIndex = el
-    },
-    onMouseLeave(el) {
-      if (this.selectedGridIndex === el)
-        this.selectedGridIndex = null
     },
   },
 }

@@ -20,21 +20,20 @@
       :to="item.to"
     />
   </div>
-  <MainNavbarItem 
-    title="Contact"
-    to="/contact"
-  />  
+  <MailContactItem />
 </div>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
 import MainNavbarItem from './MainNavbarItem.vue'
+import MailContactItem from './MailContactItem.vue'
 import LogoFallback from './images/LogoFallback.vue'
 
 export default {
   components: {
     MainNavbarItem,
+    MailContactItem,
     LogoFallback,
   },
   computed: {

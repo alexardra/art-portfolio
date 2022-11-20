@@ -3,7 +3,17 @@
   <p>© Ani Barbakadze</p>
   <p>This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously.This work is designed to showcase the student’s ability to<br/> work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for<br>educational purposes only.
   </p>
-  <p><span>Miami Ad School</span> Europe</p>
+  <Suspense>
+    <a 
+      href="https://www.miamiadschool.de/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img 
+        src="@/assets/miami-ad-school-logo.svg"
+      />
+    </a>
+  </Suspense>
 </footer>
 </template>
 
@@ -34,19 +44,5 @@ footer p:nth-of-type(2) {
   line-height: 9px;
   text-align: center;
   margin: 0;
-}
-
-footer p:nth-of-type(3) {
-  font-family: Helvetica;
-  font-style: normal;  
-  font-size: 12px;
-  line-height: 12px;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-footer p:nth-of-type(3) span {
-  font-family: Helvetica;
-  font-weight: 800;
 }
 </style>

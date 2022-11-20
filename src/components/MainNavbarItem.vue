@@ -26,7 +26,6 @@ export default {
     classes() {
       const color = this.$root.mode === 'dark' ? 'light' : 'dark'
       return this.active ? [ 'red' ] : [ color ]
-
     },
   },
 }
