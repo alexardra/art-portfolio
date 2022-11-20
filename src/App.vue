@@ -2,20 +2,28 @@
 <div class="content" :class="`${mode}-bg`">
   <MainNavbar/>
   <router-view></router-view>
+  <MainFooter 
+    v-if="showFooter"
+  />
 </div>
 </template>
 
 <script>
 import MainNavbar from './components/MainNavbar.vue'
+import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
   components: {
     MainNavbar,
+    MainFooter,
   },
   computed: {
     mode() {
       return this.$route.name === 'Main' ? 'dark' : 'light'
+    },
+    showFooter() {
+      return this.$route.fullPath.startsWith('/work')
     },
   }
 }

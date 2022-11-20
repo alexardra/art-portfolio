@@ -1,22 +1,52 @@
 <template>
-<footer>
-  <p class="mb-0 py-1" style="font-size: 11px;">© Ani Barbakadze</p>
-  <p class="mb-0" style="font-size: 9px;">This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously.This work is designed to showcase the student’s ability to<br/> work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for<br>educational purposes only.
+<footer class="w-footer outer-p bg-dark light d-flex align-items-center justify-center">
+  <p>© Ani Barbakadze</p>
+  <p>This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously.This work is designed to showcase the student’s ability to<br/> work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for<br>educational purposes only.
   </p>
-  <p class="mb-0 text-uppercase py-1"><strong>Miami Ad School</strong> Europe</p>
+  <p><span>Miami Ad School</span> Europe</p>
 </footer>
 </template>
 
 
 <style scoped>
 footer {
-  font-family: Helvetica;
-  bottom: 0;
   position: absolute;
+  bottom: 0;
   width: 100%;
-  padding: 10px 10px;
-  background: #242424;
-  color: #F6F5EC;
+  flex-direction: column;
+  row-gap: 8px;  
+}
+
+footer p:nth-of-type(1) {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 8px;
+  line-height: 9px;  
+  margin: 0;
+}
+
+footer p:nth-of-type(2) {
+  font-family: Helvetica;
+  font-style: normal;  
+  font-weight: 300;
+  font-size: 8px;
+  line-height: 9px;
   text-align: center;
+  margin: 0;
+}
+
+footer p:nth-of-type(3) {
+  font-family: Helvetica;
+  font-style: normal;  
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+footer p:nth-of-type(3) span {
+  font-family: Helvetica;
+  font-weight: 800;
 }
 </style>

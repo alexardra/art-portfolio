@@ -140,8 +140,16 @@ $h-logo: 20px;
   height: $h-logo;
 }
 
+$h-header: 60px;
+$h-footer: 115px; 
+$h-body: calc(100vh - $h-header - $h-footer);
+
 .main {
   width: 100%;
-  height: calc(100vh - 175px);
+  height: $h-body;
   display: flex;
+}
+
+.w-footer {
+  height: $h-footer;
 }
