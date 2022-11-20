@@ -1,4 +1,7 @@
 <template>
-  <div>I am Ani, I draw stars.</div>
-  <div>According to people, I have the loveliest voice and top notch sense of humor.</div>
+<div class="main align-items-center justify-center">
+  <img 
+    src="@/assets/about-me.svg"
+  />
+</div>
 </template>
