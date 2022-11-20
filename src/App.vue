@@ -1,20 +1,24 @@
 <template>
-<div class="content" :class="`${mode}-bg`">
-  <MainNavbar/>
+<PageWrapper
+  :mode="mode"
+>
+  <MainNavbar />
   <router-view></router-view>
   <MainFooter 
     v-if="showFooter"
   />
-</div>
+</PageWrapper>
 </template>
 
 <script>
+import PageWrapper from './components/PageWrapper.vue'
 import MainNavbar from './components/MainNavbar.vue'
 import MainFooter from './components/MainFooter.vue'
 
 export default {
   name: 'App',
   components: {
+    PageWrapper,
     MainNavbar,
     MainFooter,
   },
@@ -34,19 +38,6 @@ body {
   width: 100%;
   height: 100vh;
   overflow:hidden;
-}
-
-.content {
-  width: 100%;
-  height:100%;
-}
-
-.light-bg {
-  background-color: #F6F5EC !important;
-}
-
-.dark-bg {
-  background-image: url('@/assets/background-dark.svg')
 }
 
 #app {

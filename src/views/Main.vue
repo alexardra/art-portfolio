@@ -1,16 +1,14 @@
 <template>
-  <div></div>
+<Suspense>
+  <img 
+    src="@/assets/star.svg"
+    style="height: calc(100% - 115px);"
+  />
+</Suspense>
 </template>
 
 <script>
-
 export default {
   name: 'App',
 }
 </script>
-
-<style scoped>
-body {
-  background-image: url('@/assets/background-dark.svg')
-}
-</style>

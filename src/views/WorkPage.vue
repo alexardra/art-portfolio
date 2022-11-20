@@ -34,8 +34,6 @@ export default {
         return this.$options.borderGrid
 
       return this.$options.borderGrid.map((borders, index) => {
-        console.log(index, this.selectedGridIndex, borders)
-
         if (index === this.selectedGridIndex)
           return [...borders, 'border-red']
 

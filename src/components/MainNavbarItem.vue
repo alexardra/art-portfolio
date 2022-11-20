@@ -49,7 +49,7 @@ button {
   background: transparent;
   border: none;
   padding: 0;
-  line-height: 10px;
+  line-height: 16px;
 }
 
 .star-icon {

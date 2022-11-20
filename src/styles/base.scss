@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Aktiv Grotesk Ex";
+  font-family: "aktiv-grotesk-extended", sans-serif;
 }
 
 body {
@@ -92,6 +92,7 @@ $w-video: 640px;
 $h-video: 360px;
 
 .work-tile {
+  box-sizing: content-box;
   width: $w-video;
   height: $h-video;
   border: 1px solid $dark;

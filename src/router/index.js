@@ -7,7 +7,6 @@ import WorkPage from '@/views/WorkPage.vue'
 import ProjectPage from '@/views/ProjectPage.vue'
 
 import projects from '~/projects.json';
-console.log(projects)
 
 const routes = [
   {

@@ -1,8 +1,8 @@
 <template>
 <div class="outer-p main">
-  <ProjectTitle 
+  <ProjectTitle
     :title="project.title"
-    :category="project.category"
+    :subtitle="project.category"
   />
   <ProjectDescription 
     :description="project.description"

@@ -7,7 +7,7 @@
         v-bind="currentTile.details"
       />
       <template #fallback>
-        <!-- Content fallback here -->
+        Content fallback here
       </template> 
     </Suspense>
   </div>

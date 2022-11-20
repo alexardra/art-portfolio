@@ -1,7 +1,6 @@
 <template>
 <button
-  @mouseover="onMouseOver(index)"
-  :class="classes"
+  :class="color"
 >
   <a href="mailto:anniebarbakadze@gmail.com">Contact</a>
 </button>  
@@ -9,23 +8,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      active: false,
-    }
-  },
   computed: {
-    classes() {
-      return [ 
-        this.$root.mode === 'dark' ? 'light' : 'dark',
-        this.active ? 'red' : ''
-      ]
-    },
-  },
-  methods: {
-    onMouseOver() {
-      this.active = !this.active
-    },
+    color() {
+      return this.$root.mode === 'dark' ? 'light' : 'dark'
+    }
   }
 }
 </script>
@@ -36,5 +22,10 @@ button {
   border: none;
   padding: 0;
   line-height: 10px;
+  font-weight: 600;
+}
+
+button:hover {
+  color: #FC6D5E;
 }
 </style>

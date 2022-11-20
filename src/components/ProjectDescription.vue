@@ -14,3 +14,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+div {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+}
+</style>

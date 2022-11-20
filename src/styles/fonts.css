@@ -1,9 +1,23 @@
+@import url("https://p.typekit.net/p.css?s=1&k=ebo5aej&ht=tk&f=26909.26913&a=26678861&app=typekit&e=css");
+
 @font-face {
-  font-family: "Aktiv Grotesk Ex";
-  src: url('@/assets/fonts/Aktiv Grotesk Ex.woff2') format('woff2'), /* chrome、firefox */
-       url('@/assets/fonts/Aktiv Grotesk Ex.woff') format('woff'), /* chrome、firefox */
-       url('@/assets/fonts/Aktiv Grotesk Ex.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-       font-weight: 700;
-       font-display: swap;
-       font-style: normal;
+  font-family:"aktiv-grotesk-extended";
+  src:url("https://use.typekit.net/af/e10446/00000000000000003b9ad13a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/e10446/00000000000000003b9ad13a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/e10446/00000000000000003b9ad13a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display:auto;
+  font-style:normal;
+  font-weight:400;
+  font-stretch:normal;
+}
+
+@font-face {
+  font-family:"aktiv-grotesk-extended";
+  src:url("https://use.typekit.net/af/3f03c1/00000000000000003b9ad13e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/3f03c1/00000000000000003b9ad13e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/3f03c1/00000000000000003b9ad13e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display:auto;
+  font-style:normal;
+  font-weight:700;
+  font-stretch:normal;
+}
+
+.tk-aktiv-grotesk-extended { 
+  font-family: "aktiv-grotesk-extended", sans-serif; 
 }
