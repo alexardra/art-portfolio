@@ -22,33 +22,6 @@ export default {
       debounce: false,
     }
   },
-  // mounted() {
-  //   window.addEventListener('mouseover', (e) => {
-  //     console.log(e.target.id)
-
-  //     if (e.target.id === 'title') {
-  //       this.onMouseDown()
-  //     } else {
-  //       this.onMouseLeave()
-  //     }
-
-  //   }, false);
-  // },
-  // methods: {
-  //   onMouseDown() {
-  //     this.active = true
-  //     console.log('onMouseDown')
-  //   },
-  //   onMouseLeave() {
-  //     console.log('onMouseLeave')
-
-  //     if (this.active) {
-  //       setTimeout(() => {
-  //         this.active = false
-  //       }, 700)
-  //     }
-  //   },
-  // },
 }
 </script>
 
@@ -58,11 +31,21 @@ export default {
   height: calc(100vh - 60px);
 }
 
+#title {
+  position: absolute;
+  top: calc(50% - 210px);
+}
+
 .cover {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#title:hover + .cover {
+  display: block;
 }
 </style>

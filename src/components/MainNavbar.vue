@@ -18,7 +18,8 @@
       :key="item.id"
       :title="item.title"
       :to="item.to"
-    />
+      :external="item.external"
+    />  
   </div>
   <MailContactItem />
 </div>
@@ -49,10 +50,11 @@ export default {
         },
         {
           title: 'Starsheep',
-          to: '/starsheep',
+          to: 'https://www.instagram.com/starsheep2/',
+          external: true,
         },                      
       ]
-    },
+    },   
     logoComponent() {
       return {
         'light': defineAsyncComponent(

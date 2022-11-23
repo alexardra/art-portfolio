@@ -1,11 +1,23 @@
 <template>
 <div class="d-flex container align-items-end" :class="{ 'active': active }">
   <i v-if="active" class="star-icon inner-mx"></i>
-  <button 
+  <button
     :class="classes"
     :style="active ? 'font-weight: 700;': ''"
   >
-    <router-link :to="to" :key="$route.path">{{ title }}</router-link>
+    <router-link
+      v-if="!external"
+      :to="to" 
+      :key="$route.path"
+    >
+      {{ title }}
+    </router-link>
+    <a 
+      v-else 
+      target="_blank"
+      :href="to"
+    >{{ title }}
+    </a>
   </button>
 </div>
 </template>
@@ -21,6 +33,10 @@ export default {
       type: String,
       required: true,
     },
+    external: {
+      type: Boolean,
+      default: false,
+    }
   },
   computed: {
     active() {
@@ -55,6 +71,10 @@ button {
   line-height: 16px;
   font-weight: 400;
   font-size: 14px;
+}
+
+button:hover {
+  color: #FC6D5E;
 }
 
 .star-icon {
