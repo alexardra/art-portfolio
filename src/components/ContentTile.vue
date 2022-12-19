@@ -46,7 +46,7 @@ export default {
 }
 
 .content:hover {
-  border: 2px solid #FC6D5E;
+  border: 2px solid #FF6666;
 }
 
 .top {
@@ -54,7 +54,7 @@ export default {
 }
 
 .top:hover {
-  border-top: 2px solid #FC6D5E;
+  border-top: 2px solid #FF6666;
 }
 
 .right {
@@ -62,21 +62,21 @@ export default {
 }
 
 .right:hover {
-  border-right: 2px solid #FC6D5E;
+  border-right: 2px solid #FF6666;
 }
 
 .bottom {
   border-bottom: 2px solid #242424;
 }
 .bottom:hover {
-  border-bottom: 2px solid #FC6D5E;
+  border-bottom: 2px solid #FF6666;
 }
 .left {
   border-left: 2px solid #242424;
 }
 
 .left:hover {
-  border-left: 2px solid #FC6D5E;
+  border-left: 2px solid #FF6666;
 }
 
 button {
