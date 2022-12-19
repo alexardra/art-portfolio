@@ -36,29 +36,11 @@ export default {
       required: false,
     },
   },
-  // data() {
-  //   return {
-  //     path: require(`@/assets/previews/${this.url}`)
-  //   }
-  // },
   computed: {
     to() {
       return `/work/${this.id}`
     },
   },
-  // methods: {
-  //   getImgUrl(img) { 
-  //    return require('@/assets/previews/' + img)
-  //   }    
-  // }
-  // methods: {
-  //   getImageUrl() {
-  //     var images = require.context('../assets/previews', false, /\.png$/)
-  //     return images('./' + this.url)
-
-  //     // return require(`../assets/previews/${this.url}`)
-  //   },
-  // },
 }
 </script>
 

@@ -3,9 +3,10 @@
     "id": 1,
     "thumbnail": "Gaia - Wrapped with care",
     "title": "Wrapped with Care",
-    "category": "Animation",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "description": "Bees wax was is a sticky substance produced naturally from bees, traditionally used as the ’first plastic’. Wraps made out of beeswax are hence more organic and pliable offering a sustainable and long-lasting solution to plastic wraps.\n\nIn a bid to bring brand personality alongside a tactical product-driven communication approach, we highlight, through a quirky 30 sec YouTube ad, the sticky situation plastic-use brings and how Gaia’s sustainable and long-lasting wraps are the perfect antidote.",
     "preview": "gaia.png",
+    "role": "AD, Animation, illustration",
+    "author": "Team: Taylor Henderson; Risha George;",
     "works": [
       {
         "type": "iframe",
@@ -20,26 +21,81 @@
   {
     "id": 2,
     "thumbnail": "Ben&Jerry’s campaign",
-    "title": "Ben&Jerry’s campaign",
-    "category": "Animation",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "title": "Ben&Jerry’s - Try them chilled!",
+    "description": "Insights:\n<ul style='margin: 5px 0; padding-left: 20px;'><li>Homophobia is deeply rooted in patriarchy.</li><li>Coming out is one of the most important and difficult step in LGBTQ+ community.</li><li>Some people still believe in patriarchal gender norms</li>.</ul>",
     "preview": "ben-and-jerry.png",
+    "role": "Concept, Copy",
     "works": [
       {
-        "type": "iframe",
+        "type": "image",
         "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "src": "2/1 Cocnept.png",
           "width": 640,
           "height": 360
         }
-      }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "2/2 Headlines.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "2/3 Outdoor.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "2/4 outdoor.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "2/5 outdoor.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "2/6 long copy.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "2/7 long copy.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "2/8 long copy.png",
+          "width": 640,
+          "height": 360
+        }
+      }                                          
     ]
   },
   {
     "id": 3,
     "thumbnail": "Mac Cosmetics against domestic abuse",
     "title": "Mac Cosmetics against domestic abuse",
-    "category": "Animation",
     "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
     "preview": "mac-cosmetics.png",
     "works": [
@@ -57,32 +113,48 @@
     "id": 4,
     "thumbnail": "E-scooter app design",
     "title": "E-scooter app design",
-    "category": "Animation",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
     "preview": "e-scooter.png",
+    "role": "AD, UX/UI design",
+    "description": "This is my final project for UX/UI design course. My inspiration was Tbilisi street art.",
     "works": [
       {
-        "type": "iframe",
+        "type": "image",
         "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "src": "4/Artboard 1.png",
           "width": 640,
           "height": 360
         }
-      }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "4/Artboard 2.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "4/Artboard 3.png",
+          "width": 640,
+          "height": 360
+        }
+      }            
     ]
   },
   {
     "id": 5,
     "thumbnail": "Honest Diapers - Sh*tty year",
-    "title": "Honest Diapers - Sh*tty year",
-    "category": "Animation",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "title": "Honest diapers - sh*tty year",
     "preview": "shitty-year.png",
+    "role": "AD",
+    "author": "Team: Mehdi Bouktache; Vika Randrup;",    
     "works": [
       {
-        "type": "iframe",
+        "type": "image",
         "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "src": "5/honest-diapers.png",
           "width": 640,
           "height": 360
         }
@@ -93,7 +165,6 @@
     "id": 6,
     "thumbnail": "Ebaycore",
     "title": "Ebaycore",
-    "category": "Animation",
     "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
     "preview": "ebay-core.png",
     "works": [
@@ -111,7 +182,6 @@
     "id": 7,
     "thumbnail": "Candy Crush - Moms vs Noobs",
     "title": "Candy Crush - Moms vs Noobs",
-    "category": "Animation",
     "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
     "preview": "candy-crush.png",
     "works": [
@@ -129,7 +199,6 @@
     "id": 8,
     "thumbnail": "More cool stuff coming soon...",
     "title": "More cool stuff coming soon...",
-    "category": "Animation",
     "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
     "preview": "more-stuff.png",
     "works": [

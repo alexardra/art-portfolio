@@ -1,11 +1,16 @@
 <template>
-<div class="d-flex justify-center align-start flex-direction-column">
-  <h3 class="red">
+<div class="d-flex align-items-start flex-direction-column title-container">
+  <h3 class="title red">
     {{ title }}
   </h3>
-  <h4 class="dark">
-    {{ subtitle }}
-  </h4>
+  <div class="d-flex flex-direction-column align-items-start subtitle-container">
+    <span class="subtitle dark">
+      Role: {{ role }};
+    </span>
+    <span v-if="author" class="subtitle dark">
+      {{ author }}
+    </span>
+  </div>
 </div>
 </template>
 
@@ -16,30 +21,38 @@ export default {
       type: String,
       required: true,
     },
-    subtitle: {
+    role: {
       type: String,
       required: true,
+    },
+    author: {
+      type: String,
+      required: false,
     },
   }
 }
 </script>
 
 <style scoped>
-div {
-  row-gap: 4px;  
+.title-container {
+  row-gap: 8px;
 }
 
-h3 {
-  margin: 0;
+.title {
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
+  margin: 0;
+  text-align: left;
 }
 
-h4 {
-  margin: 0;
+.subtitle-container {
+  row-gap: 4px;
+}
+
+.subtitle {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 12px;
+  line-height: 15px;
 }
 </style>
