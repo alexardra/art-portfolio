@@ -6,51 +6,20 @@
     :key="i"
     :class="currentBorderGrid[index]"
   >
-    <!-- <WorkPageNavItem
-      v-if="index === 0"
+    <WorkPageNavItem
       v-bind="projects[index]"
-    /> -->
-    <router-link
-      v-if="index === 0"
-      :to="`/work/${projects[index].id}`"
-    >
-      <img 
-        src="@/assets/previews/gaia-preview.svg"
-        :alt="preview"
-      />
-    </router-link> 
-
-    <img 
-      v-else-if="index === 1"
-      src="@/assets/previews/chill-bg-preview.svg"
-      :alt="preview"
     />
-    <img 
-      v-else-if="index === 2"
-      src="@/assets/previews/mac-with-bg-preview.svg"
-      :alt="preview"
-    />
-    <img 
-      v-else-if="index === 3"
-      src="@/assets/previews/ui-uxd-preview.svg"
-      :alt="preview"
-    />
-    <img 
-      v-else
-      src="@/assets/previews/coming-soon-with-bg-preview.svg"
-      :alt="preview"
-    />            
   </div>
 </div>
 </template>
 
 <script>
 import projects from '~/projects.json'
-// import WorkPageNavItem from '@/components/WorkPageNavItem.vue'
+import WorkPageNavItem from '@/components/WorkPageNavItem.vue'
 
 export default {
   components: {
-    // WorkPageNavItem
+    WorkPageNavItem
   },
   count: 8,
   borderGrid: [
@@ -93,6 +62,7 @@ export default {
         id: project.id,
         url: project.preview,
         preview: project.title,
+        thumbnail: project.thumbnail,
       }))
     },
   },

@@ -158,3 +158,11 @@ $h-body: calc(100vh - $h-header - $h-footer);
 .w-footer {
   height: $h-footer;
 }
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}

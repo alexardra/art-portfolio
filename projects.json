@@ -1,10 +1,11 @@
 [
   {
     "id": 1,
+    "thumbnail": "Gaia - Wrapped with care",
     "title": "Wrapped with Care",
     "category": "Animation",
     "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
-    "preview": "gaia-preview.svg",
+    "preview": "gaia.png",
     "works": [
       {
         "type": "iframe",
@@ -15,5 +16,131 @@
         }
       }
     ]
-  }
+  },
+  {
+    "id": 2,
+    "thumbnail": "Ben&Jerry’s campaign",
+    "title": "Ben&Jerry’s campaign",
+    "category": "Animation",
+    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "preview": "ben-and-jerry.png",
+    "works": [
+      {
+        "type": "iframe",
+        "details": {
+          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "width": 640,
+          "height": 360
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "thumbnail": "Mac Cosmetics against domestic abuse",
+    "title": "Mac Cosmetics against domestic abuse",
+    "category": "Animation",
+    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "preview": "mac-cosmetics.png",
+    "works": [
+      {
+        "type": "iframe",
+        "details": {
+          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "width": 640,
+          "height": 360
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "thumbnail": "E-scooter app design",
+    "title": "E-scooter app design",
+    "category": "Animation",
+    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "preview": "e-scooter.png",
+    "works": [
+      {
+        "type": "iframe",
+        "details": {
+          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "width": 640,
+          "height": 360
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "thumbnail": "Honest Diapers - Sh*tty year",
+    "title": "Honest Diapers - Sh*tty year",
+    "category": "Animation",
+    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "preview": "shitty-year.png",
+    "works": [
+      {
+        "type": "iframe",
+        "details": {
+          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "width": 640,
+          "height": 360
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "thumbnail": "Ebaycore",
+    "title": "Ebaycore",
+    "category": "Animation",
+    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "preview": "ebay-core.png",
+    "works": [
+      {
+        "type": "iframe",
+        "details": {
+          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "width": 640,
+          "height": 360
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "thumbnail": "Candy Crush - Moms vs Noobs",
+    "title": "Candy Crush - Moms vs Noobs",
+    "category": "Animation",
+    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "preview": "candy-crush.png",
+    "works": [
+      {
+        "type": "iframe",
+        "details": {
+          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "width": 640,
+          "height": 360
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "thumbnail": "More cool stuff coming soon...",
+    "title": "More cool stuff coming soon...",
+    "category": "Animation",
+    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "preview": "more-stuff.png",
+    "works": [
+      {
+        "type": "iframe",
+        "details": {
+          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "width": 640,
+          "height": 360
+        }
+      }
+    ]
+  }          
 ]
