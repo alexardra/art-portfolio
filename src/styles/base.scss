@@ -167,7 +167,10 @@ $h-body: calc(100vh - $h-header - $h-footer);
   width: 100%;
 }
 
-.hd-size {
+.hd-width {
   width: 640px;
+}
+
+.hd-height {
   height: 360px;
 }

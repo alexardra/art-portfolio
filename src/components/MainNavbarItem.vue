@@ -1,5 +1,5 @@
 <template>
-<div class="d-flex container align-items-end" :class="{ 'active': active }">
+<div class="d-flex container align-items-center" :class="{ 'active': active }">
   <i v-if="active" class="star-icon inner-mx"></i>
   <button
     :class="classes"
@@ -80,7 +80,6 @@ button:hover {
 .star-icon {
   width: $w-icon;
   height: $h-icon;
-  margin-bottom: 2px;
   background-image: url('@/assets/star-icon.svg');
   background-repeat: no-repeat;
 }

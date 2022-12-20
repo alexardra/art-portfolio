@@ -51,6 +51,10 @@ export default {
 </script>
 
 <style scoped>
+div {
+  margin-bottom: 30px;
+}
+
 button {
   font-weight: 700;
   font-size: 14px;

@@ -1,18 +1,20 @@
 <template>
 <div class="outer-p main justify-center">
-  <div class="d-flex flex-direction-column project-container hd-size">
-    <ProjectTitle
-      :title="project.title"
-      :role="project.role"
-      :author="project.author"
-    />
-    <ProjectContent 
-      :content="project.works"
-    />
-    <ProjectDescription 
-      :description="project.description"
-    />
-    <ProjectNavigation 
+  <div class="d-flex flex-direction-column justify-between">
+    <div class="d-flex flex-direction-column project-container hd-width">
+      <ProjectTitle
+        :title="project.title"
+        :role="project.role"
+        :author="project.author"
+      />
+      <ProjectContent 
+        :content="project.works"
+      />
+      <ProjectDescription 
+        :description="project.description"
+      />
+    </div>
+    <ProjectNavigation
       :current="project.id"
     />
   </div>

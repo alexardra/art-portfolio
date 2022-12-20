@@ -1,15 +1,14 @@
 <template>
 <div
-  id="main"
   class="main align-items-center justify-center"
 >
   <img
     id="title"
-    src="@/assets/main-page-title.svg"
+    src="@/assets/main-page.png"
   />
   <img
     class="cover"
-    src="@/assets/main-page-stars.svg"
+    src="@/assets/main-page-stars.png"
   />
 </div>
 </template>
@@ -27,22 +26,26 @@ export default {
 
 <style scoped>
 .main {
-  position: relative;
-  height: calc(100vh - 60px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 #title {
   position: absolute;
-  top: calc(50% - 210px);
+  top: -60px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .cover {
   display: none;
   position: absolute;
-  top: 0;
+  top: -60px;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 #title:hover + .cover {
