@@ -95,14 +95,15 @@
   {
     "id": 3,
     "thumbnail": "Mac Cosmetics against domestic abuse",
-    "title": "Mac Cosmetics against domestic abuse",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "title": "Mac cosmetics",
+    "role": "Concept, AD",
+    "author": "Team: Mehdi Bouktache; Vika Randrup;",
     "preview": "mac-cosmetics.png",
     "works": [
       {
-        "type": "iframe",
+        "type": "image",
         "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
+          "src": "3/mac-cosmetics.png",
           "width": 640,
           "height": 360
         }
