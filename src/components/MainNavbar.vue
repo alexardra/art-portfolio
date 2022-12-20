@@ -1,5 +1,5 @@
 <template>
-<div class="outer-p d-flex justify-between">
+<div class="outer-p d-flex justify-between position-relative" style="z-index: 1;">
   <div 
     class="d-flex align-items-end"
   >
