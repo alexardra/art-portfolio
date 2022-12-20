@@ -2,18 +2,28 @@
 <PageWrapper
   :mode="mode"
 >
-  <MainNavbar />
-  <router-view></router-view>
-  <MainFooter 
-    v-if="showFooter"
+  <div
+    class="w-100 h-100"
+    :class="{ 'modal-backdrop': galleryOptions.showPhotoModal }"
+  >
+    <MainNavbar />
+    <router-view></router-view>
+    <MainFooter 
+      v-if="showFooter"
+    />
+  </div>
+  <PhotoGallery
+    v-if="galleryOptions.showPhotoModal"
   />
 </PageWrapper>
 </template>
 
 <script>
+/* eslint-disable no-debugger */
 import PageWrapper from './components/PageWrapper.vue'
 import MainNavbar from './components/MainNavbar.vue'
 import MainFooter from './components/MainFooter.vue'
+import PhotoGallery from './components/PhotoGallery.vue'
 
 export default {
   name: 'App',
@@ -21,6 +31,16 @@ export default {
     PageWrapper,
     MainNavbar,
     MainFooter,
+    PhotoGallery,
+  },
+  data() {
+    return {
+      galleryOptions: {
+        content: null,
+        startTileIndex: null,
+        showPhotoModal: false,
+      },
+    }
   },
   computed: {
     mode() {
@@ -29,7 +49,29 @@ export default {
     showFooter() {
       return this.$route.fullPath.startsWith('/work')
     },
-  }
+  },
+  methods: {
+    showModal(content, startTileIndex) {
+      this.galleryOptions.content = content
+      this.galleryOptions.startTileIndex = startTileIndex
+      this.galleryOptions.showPhotoModal = true
+      setTimeout(() => {
+        this.$el.addEventListener('click', this.handleOutsideClick)
+      }, 0)
+    },
+    handleOutsideClick(event) {
+      if (!event.path.find(node => node.id === 'img-fullscreen'))
+        this.hideModal()
+    },
+    hideModal() {
+      this.galleryOptions.content = null
+      this.galleryOptions.startTileIndex = null
+      this.galleryOptions.showPhotoModal = false
+      setTimeout(() => {
+        this.$el.removeEventListener('click', this.handleOutsideClick)
+      }, 0)
+    },
+  },
 }
 </script>
 

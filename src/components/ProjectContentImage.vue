@@ -1,10 +1,15 @@
 <template>
-<img 
-  :src="require(`../assets/${src}`)"
-  :width="width"
-  :height="height"
-  :alt="src"
-/>
+<div
+  :style="`width: ${width}px; height: ${height}px;`"
+>
+  <img
+    @click="showFullscreen"
+    :src="require(`../assets/${src}`)"
+    :width="width"
+    :height="height"
+    :alt="src"
+  />
+</div>
 </template>
 
 <script>
@@ -21,6 +26,19 @@ export default {
     height: {
       type: Number,
       default: 360, // change this to full size too
+    },
+    content: {
+      type: Array,
+      required: true,
+    },
+    tileIndex: {
+      type: Number,
+      default: 0,
+    }
+  },
+  methods: {
+    showFullscreen() {
+      this.$root.showModal(this.content, this.tileIndex)
     },
   }
 }

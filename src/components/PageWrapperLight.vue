@@ -1,5 +1,5 @@
 <template>
-<div class="content bg-light">
+<div class="content bg-light position-relative">
   <slot></slot>
 </div>
 </template>
