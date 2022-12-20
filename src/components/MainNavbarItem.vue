@@ -68,7 +68,7 @@ button {
   background: transparent;
   border: none;
   padding: 0;
-  line-height: 16px;
+  line-height: 12px;
   font-weight: 400;
   font-size: 14px;
 }
