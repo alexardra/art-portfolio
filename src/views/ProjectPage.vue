@@ -1,13 +1,13 @@
 <template>
 <div class="outer-p main justify-center">
-  <div class="d-flex flex-direction-column justify-between">
+  <div class="d-flex flex-direction-column">
     <div class="d-flex flex-direction-column project-container hd-width">
       <ProjectTitle
         :title="project.title"
         :role="project.role"
         :author="project.author"
       />
-      <ProjectContent 
+      <ProjectContent
         :content="project.works"
       />
       <ProjectDescription 
@@ -46,5 +46,6 @@ export default {
 <style scoped>
 .project-container {
   row-gap: 16px;
+  height: 650px;
 }
 </style>

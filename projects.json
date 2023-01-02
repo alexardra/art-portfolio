@@ -166,35 +166,14 @@
     "id": 6,
     "thumbnail": "Ebaycore",
     "title": "Ebaycore",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
-    "preview": "ebay-core.png",
-    "works": [
-      {
-        "type": "iframe",
-        "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
-          "width": 640,
-          "height": 360
-        }
-      }
-    ]
+    "preview": "ebay-core.png"
   },
   {
     "id": 7,
     "thumbnail": "Candy Crush - Moms vs Noobs",
     "title": "Candy Crush - Moms vs Noobs",
     "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
-    "preview": "candy-crush.png",
-    "works": [
-      {
-        "type": "iframe",
-        "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
-          "width": 640,
-          "height": 360
-        }
-      }
-    ]
+    "preview": "candy-crush.png"
   },
   {
     "id": 8,

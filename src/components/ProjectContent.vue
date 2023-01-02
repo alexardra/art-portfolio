@@ -4,7 +4,10 @@
     class="work-tile"
     :content="content"
   >
-    <template v-slot:content="{ currentTile, tileIndex }">
+    <template
+      v-if="content"
+      v-slot:content="{ currentTile, tileIndex }"
+    >
       <Suspense>
         <component 
           :is="tileComponent(currentTile)"
@@ -13,7 +16,7 @@
           :tileIndex="tileIndex"
         />
         <template #fallback>
-          Content fallback
+          <span>This work is not available yet...</span>
         </template> 
       </Suspense>
     </template>

@@ -62,6 +62,7 @@ button {
   outline: none;
   background: inherit;
   border: 0;
+  padding: 0;
 }
 
 button:hover {

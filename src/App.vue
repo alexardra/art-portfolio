@@ -56,19 +56,19 @@ export default {
       this.galleryOptions.startTileIndex = startTileIndex
       this.galleryOptions.showPhotoModal = true
       setTimeout(() => {
-        this.$el.addEventListener('click', this.handleOutsideClick)
+        document.addEventListener('click', this.hideOnClick)
       }, 0)
     },
-    handleOutsideClick(event) {
-      if (!event.path.find(node => node.id === 'img-fullscreen'))
-        this.hideModal()
+    hideOnClick(event) {
+      if (event.target.id !== 'fullscreen' && event.target.parentNode.id !== 'fullscreen')
+          this.hideModal()
     },
     hideModal() {
       this.galleryOptions.content = null
       this.galleryOptions.startTileIndex = null
       this.galleryOptions.showPhotoModal = false
       setTimeout(() => {
-        this.$el.removeEventListener('click', this.handleOutsideClick)
+        document.removeEventListener('click', this.hideOnClick)
       }, 0)
     },
   },

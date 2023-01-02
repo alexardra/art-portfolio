@@ -2,7 +2,7 @@
 <div class="modal-window">
   <div class="modal">
     <NavigationWrapper
-      id="img-fullscreen"
+      id="fullscreen"
       :content="content"
       :startIndex="startTileIndex"
     >

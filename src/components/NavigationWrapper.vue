@@ -43,10 +43,10 @@ export default {
   },
   computed: {
     currentTile() {
-      return this.content[this.currentTileIndex];
+      return this.content && this.content[this.currentTileIndex];
     },
     showNavigation() {
-      return this.content.length > 1
+      return this.content && this.content.length > 1
     },
     prevDisabled() {
       return this.currentTileIndex === 0
