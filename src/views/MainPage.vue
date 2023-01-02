@@ -6,6 +6,7 @@
     id="title"
     src="@/assets/main-page.png"
   />
+  <div id="overlay" :style="`width: ${width}px; height: ${height}px; z-index: 100`"></div>
   <img
     class="cover"
     src="@/assets/main-page-stars.png"
@@ -19,8 +20,16 @@ export default {
     return {
       active: false,
       debounce: false,
+      width: 0,
+      height: 0,
     }
   },
+  mounted() {
+    this.width = (3485 * window.innerWidth) / 5758
+    this.height = (1012 * window.innerHeight) / 3150 - 60
+    // console.log(window.innerWidth, window.innerHeight)
+  },
+
 }
 </script>
 
@@ -48,7 +57,7 @@ export default {
   height: 100vh;
 }
 
-#title:hover + .cover {
+#overlay:hover + .cover {
   display: block;
 }
 </style>
