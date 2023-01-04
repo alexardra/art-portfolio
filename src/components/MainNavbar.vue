@@ -1,70 +1,74 @@
 <template>
-<div class="outer-p d-flex justify-between position-relative" style="z-index: 1;">
-  <div 
-    class="d-flex align-items-end"
+  <div
+    class="
+      outer-p
+      d-flex
+      justify-between
+      align-items-end
+      position-relative
+      container
+    "
+    style="z-index: 1"
   >
-    <router-link to="/" class="h-logo">
-      <Suspense>
-        <component 
-          :is="logoComponent"
-        />
-        <template #fallback>
-          <LogoFallback />
-        </template>
-      </Suspense>
-    </router-link>
-    <MainNavbarItem 
-      v-for="item in navbarItems"
-      :key="item.id"
-      :title="item.title"
-      :to="item.to"
-      :external="item.external"
-    />  
+    <div class="d-flex align-items-end">
+      <component :is="logoComponent" />
+      <MainNavbarItem
+        v-for="item in navbarItems"
+        :key="item.id"
+        :title="item.title"
+        :to="item.to"
+        :external="item.external"
+      />
+    </div>
+    <MainNavbarItem
+      to="mailto:anniebarbakadze@gmail.com"
+      title="Contact"
+      :external="true"
+      :bold="true"
+    />
   </div>
-  <MailContactItem />
-</div>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import MainNavbarItem from './MainNavbarItem.vue'
-import MailContactItem from './MailContactItem.vue'
-import LogoFallback from './images/LogoFallback.vue'
+import { defineAsyncComponent } from "vue";
+import MainNavbarItem from "./MainNavbarItem.vue";
 
 export default {
   components: {
     MainNavbarItem,
-    MailContactItem,
-    LogoFallback,
   },
   computed: {
     navbarItems() {
       return [
         {
-          title: 'Work',
-          to: '/work',
+          title: "Work",
+          to: "/work",
         },
         {
-          title: 'Me',
-          to: '/about',
+          title: "Me",
+          to: "/about",
         },
         {
-          title: 'Starsheep',
-          to: 'https://www.instagram.com/starsheep2/',
+          title: "Starsheep",
+          to: "https://www.instagram.com/starsheep2/",
           external: true,
-        },                      
-      ]
-    },   
+        },
+      ];
+    },
     logoComponent() {
       return {
-        'light': defineAsyncComponent(
-          () => import('./images/LogoDark.vue'),
-        ),
-        'dark': defineAsyncComponent(
-          () => import('./images/LogoLight.vue'),
-        ),
-      }[this.$root.mode]
+        light: defineAsyncComponent(() => import("./images/LogoDark.vue")),
+        dark: defineAsyncComponent(() => import("./images/LogoLight.vue")),
+      }[this.$root.mode];
     },
+  },
+};
+</script>
+
+<style scoped>
+@media only screen and (max-width: 600px) {
+  .outer-p {
+    padding: 10px;
   }
 }
-</script>
+</style>

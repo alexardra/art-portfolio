@@ -7,14 +7,20 @@
   font-family: "aktiv-grotesk-extended", sans-serif;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
+  position: fixed;
 }
 
 a {
   color: inherit;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .outer-p {
@@ -96,6 +102,7 @@ $h-video: 360px;
   width: $w-video;
   height: $h-video;
   border: 1px solid $dark;
+  cursor: pointer;
 }
 
 .border-dark {
@@ -150,7 +157,7 @@ $h-logo: 20px;
 }
 
 $h-header: 60px;
-$h-footer: 115px; 
+$h-footer: 115px;
 $h-body: calc(100vh - $h-header - $h-footer);
 
 .main {
@@ -200,4 +207,17 @@ $h-body: calc(100vh - $h-header - $h-footer);
 .modal-backdrop {
   filter: blur(2px);
   -webkit-filter: blur(2px);
+}
+
+@media only screen and (max-width: 600px) {
+  $w-logo: 35px;
+  $h-logo: 15px;
+
+  .w-logo {
+    width: $w-logo;
+  }
+
+  .h-logo {
+    height: $h-logo;
+  }
 }

@@ -1,22 +1,22 @@
 <template>
-<div class="d-flex justify-between">
-  <button 
-    @click="goToPrev"
-    class="dark"
-    type="submit"
-    :disabled="prevDisabled"
-  >
-    &lt; Previous Project
-  </button>
-  <button 
-    @click="goToNext"
-    class="dark"
-    type="submit"
-    :disabled="nextDisabled"
-  >
-    Next Project &gt;
-  </button>
-</div>
+  <div class="d-flex justify-between">
+    <button
+      @click="goToPrev"
+      class="dark"
+      type="submit"
+      :disabled="prevDisabled"
+    >
+      &lt; Previous Project
+    </button>
+    <button
+      @click="goToNext"
+      class="dark"
+      type="submit"
+      :disabled="nextDisabled"
+    >
+      Next Project &gt;
+    </button>
+  </div>
 </template>
 
 <script>
@@ -29,25 +29,25 @@ export default {
   },
   computed: {
     prevDisabled() {
-      return this.current === 1
+      return this.current === 1;
     },
     nextDisabled() {
-      return this.current === 7
+      return this.current === 7;
     },
   },
   methods: {
     goToPrev() {
       this.$router.push({
-        path: `/work/${this.current - 1}`
-      })
+        path: `/work/${this.current - 1}`,
+      });
     },
     goToNext() {
       this.$router.push({
-        path: `/work/${this.current + 1}`
-      })
+        path: `/work/${this.current + 1}`,
+      });
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -63,6 +63,7 @@ button {
   background: inherit;
   border: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 button:hover {
@@ -70,6 +71,6 @@ button:hover {
 }
 
 button:disabled {
-  color: #BFBEBE;
+  color: #bfbebe;
 }
 </style>

@@ -1,25 +1,13 @@
 <template>
-<div class="d-flex container align-items-center" :class="{ 'active': active }">
-  <i v-if="active" class="star-icon inner-mx"></i>
-  <button
-    :class="classes"
-    :style="active ? 'font-weight: 700;': ''"
-  >
-    <router-link
-      v-if="!external"
-      :to="to" 
-      :key="$route.path"
-    >
-      {{ title }}
-    </router-link>
-    <a 
-      v-else 
-      target="_blank"
-      :href="to"
-    >{{ title }}
-    </a>
-  </button>
-</div>
+  <div class="d-flex container align-items-center" :class="{ active: active }">
+    <i v-if="active" class="star-icon inner-mx"></i>
+    <button :class="classes" :style="active ? 'font-weight: 700;' : ''">
+      <router-link v-if="!external" :to="to" :key="$route.path">
+        {{ title }}
+      </router-link>
+      <a v-else target="_blank" :href="to">{{ title }} </a>
+    </button>
+  </div>
 </template>
 
 <script>
@@ -36,18 +24,24 @@ export default {
     external: {
       type: Boolean,
       default: false,
-    }
+    },
+    bold: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     active() {
-      return this.$route.path === this.to
+      return this.$route.path === this.to;
     },
     classes() {
-      const color = this.$root.mode === 'dark' ? 'light' : 'dark'
-      return this.active ? [ 'red' ] : [ color ]
+      const cls = this.bold ? ["bold"] : [];
+      const color = this.$root.mode === "dark" ? "light" : "dark";
+
+      return this.active ? [...cls, "red"] : [...cls, color];
     },
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -74,13 +68,33 @@ button {
 }
 
 button:hover {
-  color: #FF6666;
+  color: #ff6666;
 }
 
 .star-icon {
   width: $w-icon;
   height: $h-icon;
-  background-image: url('@/assets/star-icon.svg');
+  background-image: url("@/assets/star-icon.svg");
   background-repeat: no-repeat;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  .star-icon {
+    display: none;
+  }
+
+  .container,
+  .container.active {
+    padding-left: 18px;
+  }
+
+  button {
+    line-height: 10px;
+    font-size: 12px;
+  }
 }
 </style>
