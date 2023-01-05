@@ -17,7 +17,7 @@
         />
       </div>
       <span class="title">{{ thumbnail }}</span>
-      <img v-if="blocked" class="icon-block" src="@/assets/block.png" />
+      <img v-if="blocked" class="icon-block" src="@/assets/block.svg" />
     </div>
   </router-link>
 </template>

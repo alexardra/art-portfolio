@@ -1,7 +1,7 @@
 <template>
   <div class="outer-p main justify-center">
     <form @submit.prevent="checkPass">
-      <img src="@/assets/block.png" />
+      <img src="@/assets/block.svg" />
       <span>Enter Password to open</span>
       <div class="block-input-container">
         <input type="password" v-model="password" />
@@ -81,11 +81,11 @@ form span {
 }
 
 .icon-submit {
-  background-image: url("@/assets/icon-submit.png");
+  background-image: url("@/assets/icon-submit.svg");
   background-size: cover;
   display: inline-block;
   width: 8px;
   height: 14px;
-  margin-top: 2.5px;
+  margin-top: 3px;
 }
 </style>
