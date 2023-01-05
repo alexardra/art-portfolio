@@ -89,7 +89,7 @@
           "width": 640,
           "height": 360
         }
-      }                                          
+      }
     ]
   },
   {
@@ -141,7 +141,7 @@
           "width": 640,
           "height": 360
         }
-      }            
+      }
     ]
   },
   {
@@ -150,7 +150,7 @@
     "title": "Honest diapers - sh*tty year",
     "preview": "shitty-year.png",
     "role": "AD",
-    "author": "Team: Mehdi Bouktache; Vika Randrup;",    
+    "author": "Team: Mehdi Bouktache; Vika Randrup;",
     "works": [
       {
         "type": "image",
@@ -166,30 +166,21 @@
     "id": 6,
     "thumbnail": "Ebaycore",
     "title": "Ebaycore",
-    "preview": "ebay-core.png"
+    "preview": "ebay-core.png",
+    "blocked": true
   },
   {
     "id": 7,
     "thumbnail": "Candy Crush - Moms vs Noobs",
     "title": "Candy Crush - Moms vs Noobs",
     "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
-    "preview": "candy-crush.png"
+    "preview": "candy-crush.png",
+    "blocked": true
   },
   {
     "id": 8,
     "thumbnail": "More cool stuff coming soon...",
     "title": "More cool stuff coming soon...",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
-    "preview": "more-stuff.png",
-    "works": [
-      {
-        "type": "iframe",
-        "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
-          "width": 640,
-          "height": 360
-        }
-      }
-    ]
-  }          
+    "preview": "more-stuff.png"
+  }
 ]

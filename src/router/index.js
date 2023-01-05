@@ -5,15 +5,17 @@ import Contact from '@/views/Contact.vue'
 import Starsheep from '@/views/Starsheep.vue'
 import WorkPage from '@/views/WorkPage.vue'
 import ProjectPage from '@/views/ProjectPage.vue'
+import ProjectBlockedPage from '@/views/ProjectBlockedPage.vue'
 
 import projects from '~/projects.json';
+/* eslint-disable no-debugger */
 
 const routes = [
   {
     path: '/',
     name: 'MainPage',
     component: MainPage,
-  },  
+  },
   {
     path: "/work",
     name: "Work",
@@ -23,8 +25,20 @@ const routes = [
     path: '/work/:id',
     name: 'Project',
     component: ProjectPage,
-    beforeEnter: (to) => {
-      return !!projects.find(project => project.id === Number(to.params.id))
+    beforeEnter: (to, from, next) => {
+      const project = projects.find(project => project.id === Number(to.params.id))
+
+      if (!project)
+        return false
+
+      if (!project.blocked)
+        return next()
+
+      const isBlockedPageEnabled = window.localStorage.getItem('enabled')
+      if (isBlockedPageEnabled)
+        return next()
+
+      next({ path: `/work/blocked/${to.params.id}` })
     },
     props: route => ({
       project: projects.find(project => project.id === Number(route.params.id))
@@ -45,6 +59,11 @@ const routes = [
     name: "About",
     component: About,
   },
+  {
+    path: '/work/blocked/:id',
+    name: 'ProjectBlockedPage',
+    component: ProjectBlockedPage,
+  }
 ];
 
 const router = createRouter({

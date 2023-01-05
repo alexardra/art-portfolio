@@ -27,12 +27,21 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      pagesCount: 0,
+    };
+  },
+  created() {
+    const isBlockedPageEnabled = window.localStorage.getItem("enabled");
+    this.pagesCount = isBlockedPageEnabled ? 7 : 5;
+  },
   computed: {
     prevDisabled() {
       return this.current === 1;
     },
     nextDisabled() {
-      return this.current === 7;
+      return this.current >= this.pagesCount;
     },
   },
   methods: {
@@ -57,7 +66,7 @@ div {
 
 button {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   outline: none;
   background: inherit;
@@ -72,5 +81,11 @@ button:hover {
 
 button:disabled {
   color: #bfbebe;
+}
+
+@media only screen and (min-width: 600px) {
+  button {
+    font-size: 14px;
+  }
 }
 </style>

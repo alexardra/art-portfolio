@@ -13,7 +13,6 @@
 </template>
 
 <script>
-/* eslint-disable no-debugger */
 import PageWrapper from "./components/PageWrapper.vue";
 import MainNavbar from "./components/MainNavbar.vue";
 import MainFooter from "./components/MainFooter.vue";

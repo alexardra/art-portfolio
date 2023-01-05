@@ -1,15 +1,11 @@
 <template>
-<div
-  :style="`width: ${width}px; height: ${height}px;`"
->
-  <img
-    @click="showFullscreen"
-    :src="require(`../assets/${src}`)"
-    :width="width"
-    :height="height"
-    :alt="src"
-  />
-</div>
+  <div class="tile-container">
+    <img
+      @click="showFullscreen"
+      :src="require(`../assets/${src}`)"
+      :alt="src"
+    />
+  </div>
 </template>
 
 <script>
@@ -19,14 +15,6 @@ export default {
       type: String,
       required: true,
     },
-    width: {
-      type: Number,
-      default: 640, // change this to full size
-    },
-    height: {
-      type: Number,
-      default: 360, // change this to full size too
-    },
     content: {
       type: Array,
       required: true,
@@ -34,12 +22,20 @@ export default {
     tileIndex: {
       type: Number,
       default: 0,
-    }
+    },
   },
   methods: {
     showFullscreen() {
-      this.$root.showModal(this.content, this.tileIndex)
+      this.$root.showModal(this.content, this.tileIndex);
     },
-  }
-}
+  },
+};
 </script>
+
+<style scoped>
+.tile-container,
+.tile-container img {
+  width: 100%;
+  height: 100%;
+}
+</style>

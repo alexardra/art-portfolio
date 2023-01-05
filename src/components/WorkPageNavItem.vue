@@ -1,22 +1,28 @@
 <template>
-<router-link
-  :to="to"
->
-  <div class="arrangements-stack outer-p align-items-start h-100 position-relative">
-    <div class="d-flex justify-center h-100 w-100">
-      <img
-        class="h-100"
-        :alt="preview"
-        :src="require(`../assets/previews/${url}`)"
-      />
+  <router-link :to="to">
+    <div
+      class="
+        arrangements-stack
+        outer-p
+        align-items-start
+        h-100
+        position-relative
+      "
+    >
+      <div class="d-flex justify-center h-100 w-100">
+        <img
+          class="h-100"
+          :alt="preview"
+          :src="require(`../assets/previews/${url}`)"
+        />
+      </div>
+      <span class="title">{{ thumbnail }}</span>
+      <img v-if="blocked" class="icon-block" src="@/assets/block.png" />
     </div>
-    <span class="title">{{ thumbnail }}</span>
-  </div>
-</router-link>
+  </router-link>
 </template>
 
 <script>
-
 export default {
   props: {
     id: {
@@ -35,13 +41,17 @@ export default {
       type: String,
       required: false,
     },
+    blocked: {
+      type: Boolean,
+      required: false,
+    },
   },
   computed: {
     to() {
-      return `/work/${this.id}`
+      return `/work/${this.id}`;
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -53,6 +63,32 @@ export default {
   font-size: 14px;
   line-height: 18px;
   color: #242424;
-  font-family: "aktiv-grotesk-extended", sans-serif;  
+  font-family: "aktiv-grotesk-extended", sans-serif;
+}
+
+.icon-block {
+  position: absolute;
+  right: 5px;
+  bottom: 20px;
+}
+
+.outer-p {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 480px) {
+  .outer-p {
+    padding: 20px;
+  }
+
+  .icon-block {
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1275px) {
+  .title {
+    width: 175px;
+  }
 }
 </style>
