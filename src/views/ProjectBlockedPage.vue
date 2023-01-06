@@ -1,7 +1,7 @@
 <template>
   <div class="outer-p main justify-center">
     <form @submit.prevent="checkPass">
-      <img src="@/assets/block.svg" />
+      <img src="@/assets/block.png" />
       <span>Enter Password to open</span>
       <div class="block-input-container">
         <input type="password" v-model="password" />

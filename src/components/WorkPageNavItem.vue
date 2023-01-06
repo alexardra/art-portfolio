@@ -17,7 +17,7 @@
         />
       </div>
       <span class="title">{{ thumbnail }}</span>
-      <img v-if="blocked" class="icon-block" src="@/assets/block.svg" />
+      <img v-if="blocked" class="icon-block" src="@/assets/block.png" />
     </div>
   </router-link>
 </template>
@@ -70,6 +70,8 @@ export default {
   position: absolute;
   right: 5px;
   bottom: 20px;
+  width: 22px;
+  height: 26px;
 }
 
 .outer-p {
