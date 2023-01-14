@@ -1,5 +1,5 @@
 <template>
-  <div class="outer-p main justify-center">
+  <div class="main justify-center">
     <div class="d-flex flex-direction-column">
       <div class="d-flex flex-direction-column project-container hd-width">
         <ProjectTitle
@@ -44,7 +44,7 @@ export default {
 }
 
 .main > div {
-  row-gap: 8px;
+  row-gap: 16px;
 }
 .project-container {
   row-gap: 16px;
@@ -89,7 +89,7 @@ export default {
   }
 }
 
-@media only screen and (min-height: 700px) {
+@media only screen and (min-height: 800px) {
   .main {
     overflow-y: hidden;
   }
