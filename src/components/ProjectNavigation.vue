@@ -34,14 +34,14 @@ export default {
   },
   created() {
     const isBlockedPageEnabled = window.localStorage.getItem("enabled");
-    this.pagesCount = isBlockedPageEnabled ? 7 : 5;
+    this.pagesCount = isBlockedPageEnabled ? 8 : 6;
   },
   computed: {
     prevDisabled() {
       return this.current === 1;
     },
     nextDisabled() {
-      return this.current >= this.pagesCount;
+      return this.current === this.pagesCount;
     },
   },
   methods: {
