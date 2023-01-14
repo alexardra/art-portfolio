@@ -3,6 +3,7 @@
   <div class="modal">
     <NavigationWrapper
       id="fullscreen"
+      size="large"
       :content="content"
       :startIndex="startTileIndex"
     >
@@ -33,11 +34,6 @@ export default {
       return this.$root.galleryOptions.startTileIndex
     },
   },
-  methods: {
-    hideFullscreen() {
-      this.$root.hideModal()
-    },
-  }
 }
 </script>
 
