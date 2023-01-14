@@ -5,10 +5,22 @@
       <div class="description">
         <img src="@/assets/about-me.svg" />
         <a
-          class="link-container"
+          class="link-container-cv"
           href="/Ani_Barbakadze_CV.pdf"
           target="_blank"
         ></a>
+        <a
+          class="link-container-music"
+          href="https://open.spotify.com/playlist/1cUWsL4xm9XgJ94NJagSie?si=862b53a99a3248d2f"
+          rel="noopener noreferrer"
+          target="_blank"
+        ></a>
+        <a
+          class="link-container-movies"
+          href="https://letterboxd.com/Ani2/"
+          rel="noopener noreferrer"
+          target="_blank"
+        ></a>                
       </div>
     </div>
   </div>
@@ -31,10 +43,28 @@
   /* border: 1px solid red; */
 }
 
-.link-container {
+.link-container-cv {
   position: absolute;
   bottom: 0px;
   right: 30%;
+  width: 20%;
+  height: 5%;
+  /* border: 1px solid blue; */
+}
+
+.link-container-music {
+  position: absolute;
+  top: 32%;
+  right: 18%;
+  width: 20%;
+  height: 5%;
+  /* border: 1px solid blue; */
+} 
+
+.link-container-movies {
+  position: absolute;
+  top: 35%;
+  left: 32%;
   width: 20%;
   height: 5%;
   /* border: 1px solid blue; */

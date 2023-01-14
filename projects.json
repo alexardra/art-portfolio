@@ -169,7 +169,7 @@
     "title": "Robobo - Board Game",
     "preview": "robob.png",
     "role": "GD, Character design",
-    "author": "Game design: <a style='text-decoration: underline;' href='https://www.youtube.com/@TsibakhaGameClub' target='_blank'>Tsibakha Games</a>",
+    "author": "Game design: <a style='text-decoration: underline;' href='https://www.youtube.com/@TsibakhaGameClub' target='_blank' rel='noopener noreferrer'>Tsibakha Games</a>",
     "works": [
       {
         "type": "image",
@@ -233,15 +233,38 @@
     "id": 7,
     "thumbnail": "Ebaycore",
     "title": "Ebaycore",
+    "author": "Coming soon...",
     "preview": "ebay-core.png",
-    "blocked": true
+    "description": "This work is currently submitted to <a style='text-decoration: underline;' href='https://www.dandad.org/en/d-ad-new-blood-awards/' target='_blank' rel='noopener noreferrer'>D&AD New Blood Awards</a>. It will become available for viewing once the award ceremony is held.",
+    "blocked": true,
+    "works": [
+      {
+        "type": "image",
+        "details": {
+          "src": "previews/more-stuff.png",
+          "width": 300,
+          "height": 300
+        }        
+      }
+    ]
   },
   {
     "id": 8,
     "thumbnail": "Candy Crush - Moms vs Noobs",
     "title": "Candy Crush - Moms vs Noobs",
-    "description": "Project explanation text allalalalalalla  This is student work. Names, characters, brands, places and incidents either are products of the author’s imagination or are used fictitiously. This work is designed to showcase the student’s ability to work with real world brands in real world applications. Any resemblance to actual events, brands, campaigns, locales or persons, living or dead, is entirely coincidental. This presentation is meant for educational purposes only.",
+    "author": "Coming soon...",
     "preview": "candy-crush.png",
-    "blocked": true
+    "description": "This work is currently submitted to <a style='text-decoration: underline;' href='https://www.dandad.org/en/d-ad-new-blood-awards/' target='_blank' rel='noopener noreferrer'>D&AD New Blood Awards</a>. It will become available for viewing once the award ceremony is held.",    
+    "blocked": true,
+    "works": [
+      {
+        "type": "image",
+        "details": {
+          "src": "previews/more-stuff.png",
+          "width": 300,
+          "height": 300
+        }        
+      }
+    ]    
   }
 ]

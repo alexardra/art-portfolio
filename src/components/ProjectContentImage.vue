@@ -1,5 +1,5 @@
 <template>
-  <div class="tile-container">
+  <div class="tile-container" :style="styles">
     <img
       @click="showFullscreen"
       :src="require(`../assets/${src}`)"
@@ -22,6 +22,19 @@ export default {
     tileIndex: {
       type: Number,
       default: 0,
+    },
+    width: {
+      type: Number,
+      required: false,
+    },
+    height: {
+      type: Number,
+      required: false,
+    }
+  },
+  computed: {
+    styles() {
+      return `max-width: ${this.width}px; max-height: ${this.height}px; margin: auto;`
     },
   },
   methods: {
