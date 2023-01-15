@@ -9,7 +9,9 @@
           :tileIndex="tileIndex"
         />
         <template #fallback>
-          <span>This work is not available yet...</span>
+          <div class="d-flex align-items-center justify-center w-100 h-100">
+            <span >Loading ...</span>
+          </div>
         </template>
       </Suspense>
     </template>
