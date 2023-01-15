@@ -1,7 +1,7 @@
 <template>
   <div class="main align-items-center justify-center">
     <div class="img-container d-flex align-items-center">
-      <img class="avatar" src="@/assets/about-me-avatar.png" />
+      <img class="avatar" src="@/assets/about-me-avatar.webp" />
       <div class="description">
         <img src="@/assets/about-me.svg" />
         <a
@@ -72,6 +72,7 @@
 
 .avatar {
   width: 70px;
+  height: 100%;
   max-height: calc(100vh - 60px);
 }
 
@@ -82,6 +83,7 @@
 
 .description img {
   width: 100%;
+  height: 100%;
   max-height: calc(100vh - 60px);
 }
 

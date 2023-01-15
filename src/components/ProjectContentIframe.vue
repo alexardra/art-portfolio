@@ -1,4 +1,5 @@
 <template>
+<lazy-component tag="div">
   <iframe
     frameborder="0"
     allow="autoplay; fullscreen; picture-in-picture"
@@ -6,6 +7,7 @@
     :src="src"
   >
   </iframe>
+</lazy-component>
 </template>
 
 <script>
@@ -20,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-iframe {
+div, iframe {
   width: 100%;
   height: 100%;
 }

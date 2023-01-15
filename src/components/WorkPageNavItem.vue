@@ -12,6 +12,7 @@
       <div class="d-flex justify-center h-100 w-100">
         <img
           class="h-100"
+          :style="`width: auto;`"
           :alt="preview"
           :src="require(`../assets/previews/${url}`)"
         />

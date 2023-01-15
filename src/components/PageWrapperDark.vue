@@ -1,6 +1,6 @@
 <template>
 <Suspense>
-  <div class="content" :style="style">
+  <div class="content bg">
     <slot></slot>
   </div>
   <template #fallback>
@@ -11,19 +11,6 @@
 </Suspense>
 </template>
 
-<script>
-export default {
-  computed: {
-    imageUrl() {
-      return `${window.location.origin}/background-dark.svg`
-    },
-    style() {
-      return `background-image: url(${this.imageUrl})`
-    },
-  }
-}
-</script>
-
 <style scoped>
 .content {
   width: 100%;
@@ -33,8 +20,4 @@ export default {
 .bg-fallback {
   background-color: #2d2d2c;
 }
-
-/* .bg {
-  background-image: url('~/background-dark.svg')
-} */
 </style>

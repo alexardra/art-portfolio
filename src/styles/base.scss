@@ -46,6 +46,10 @@ a {
   height: 360px;
 }
 
+.bg {
+  background-image: url('@/assets/background-dark.svg')
+}
+
 $red: #FF6666;
 $dark: #242424;
 $light: #F6F5EC;
