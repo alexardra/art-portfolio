@@ -10,7 +10,7 @@
         />
         <template #fallback>
           <div class="d-flex align-items-center justify-center w-100 h-100">
-            <span >Loading ...</span>
+            <span>Loading ...</span>
           </div>
         </template>
       </Suspense>
