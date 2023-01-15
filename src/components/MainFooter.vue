@@ -62,9 +62,12 @@ footer p:nth-of-type(2) {
   /* display: none; */
 }
 
-/* @media only screen and (min-width: 768px) {
+@media only screen and (max-width: 640px) {
   footer p:nth-of-type(2) {
-    display: block;
+    display: none;
   }
-} */
+  .w-footer {
+    height: 45px;
+  }
+}
 </style>
