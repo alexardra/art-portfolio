@@ -46,9 +46,6 @@ export default {
       currentTileIndex: 0,
     };
   },
-  created() {
-    this.currentTileIndex = this.startIndex;
-  },
   computed: {
     currentTile() {
       return this.content && this.content[this.currentTileIndex];
@@ -74,6 +71,14 @@ export default {
       this.currentTileIndex -= 1;
     },
   },
+  watch: {
+    $route: {
+      immediate: true,
+      handler() {
+        this.currentTileIndex = this.startIndex;
+      },
+    },
+  }
 };
 </script>
 

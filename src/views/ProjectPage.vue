@@ -89,7 +89,7 @@ export default {
   }
 }
 
-@media only screen and (min-height: 800px) {
+@media only screen and (min-height: 840px) {
   .main {
     overflow-y: hidden;
   }

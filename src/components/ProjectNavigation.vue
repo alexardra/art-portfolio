@@ -60,10 +60,6 @@ export default {
 </script>
 
 <style scoped>
-div {
-  margin-bottom: 30px;
-}
-
 button {
   font-weight: 700;
   font-size: 12px;
@@ -73,6 +69,7 @@ button {
   border: 0;
   padding: 0;
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 button:hover {
