@@ -39,6 +39,7 @@ export default {
           import("./ProjectContentIframe.vue")
         ),
         image: defineAsyncComponent(() => import("./ProjectContentImage.vue")),
+        video: defineAsyncComponent(() => import("./ProjectContentVideo.vue")),
       }[tile.type];
     },
   },

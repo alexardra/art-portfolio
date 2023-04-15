@@ -94,35 +94,67 @@
   },
   {
     "id": 3,
-    "thumbnail": "Mac Cosmetics against domestic abuse",
-    "title": "Mac cosmetics",
-    "role": "Concept, AD",
-    "author": "Team: Mehdi Bouktache; Vika Randrup;",
-    "description": "Domestic violence is still a huge problem today and it is not talked about enough in our society. In most cases, victims use makeup to cover traces of physical violence. With the #MyReality campaign, we want to raise awareness and use a new product design as a conversation starter.",
-    "preview": "mac-cosmetics.webp",
+    "thumbnail": "Penguin merchandise design",
+    "title": "Penguin Merchandise Design",
+    "preview": "penguins.png",
+    "description": "This work is currently submitted to <a style='text-decoration: underline;' href='https://www.dandad.org/en/d-ad-new-blood-awards/' target='_blank' rel='noopener noreferrer'>D&AD New Blood Awards</a>. It will become available for viewing once the award ceremony is held.",
+    "role": "AD, Concept",
+    "blocked": true,
+    "author": "Team: Claudia Güell - CW, Concept;",
     "works": [
+      {
+        "type": "video",
+        "details": {
+          "src": "3/Deliverable.mp4",
+          "width": 640,
+          "height": 360
+        }      
+      },
       {
         "type": "image",
         "details": {
-          "src": "3/mac-cosmetics.webp",
+          "src": "3/Supporting image 1.jpg",
           "width": 640,
           "height": 360
-        }
+        }      
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "3/Supporting image 2.jpg",
+          "width": 640,
+          "height": 360
+        }      
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "3/Supporting image 3.jpg",
+          "width": 640,
+          "height": 360
+        }      
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "3/Supporting image 4.jpg",
+          "width": 640,
+          "height": 360
+        }      
       }
     ]
   },
   {
     "id": 4,
-    "thumbnail": "E-scooter app design",
-    "title": "E-scooter app design",
-    "preview": "e-scooter.webp",
-    "role": "AD, UX/UI design",
-    "description": "This is my final project for UX/UI design basics course at 303Px - Graphic Design School in Tbilisi, Georgia. The objective of the project was to create e-scooter app design. In recent years, electronic scooters became widely popular in Tbilisi, as part of the city trends of catching up with the rest of the world. I designed the app taking into account younger generation being the target audience for the app. For that reason main inspiration of my design was Tbilisi street art.",
+    "thumbnail": "Cosmo - typeface design",
+    "title": "Cosmo - typeface design",
+    "description": "I made this project as part of advanced typography workshop in Miami Ad School Europe.",
+    "preview": "cosmo.png",
     "works": [
       {
         "type": "image",
         "details": {
-          "src": "4/Artboard 1.webp",
+          "src": "4/Artboard 1.png",
           "width": 640,
           "height": 360
         }
@@ -130,7 +162,7 @@
       {
         "type": "image",
         "details": {
-          "src": "4/Artboard 2.webp",
+          "src": "4/Artboard 2.png",
           "width": 640,
           "height": 360
         }
@@ -138,7 +170,23 @@
       {
         "type": "image",
         "details": {
-          "src": "4/Artboard 3.webp",
+          "src": "4/Artboard 3.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "4/Artboard 4.png",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "4/Artboard 5.png",
           "width": 640,
           "height": 360
         }
@@ -232,40 +280,55 @@
   },  
   {
     "id": 7,
-    "thumbnail": "Ebaycore",
-    "title": "Ebaycore",
-    "author": "Coming soon...",
-    "preview": "ebay-core.webp",
-    "description": "This work is currently submitted to <a style='text-decoration: underline;' href='https://www.dandad.org/en/d-ad-new-blood-awards/' target='_blank' rel='noopener noreferrer'>D&AD New Blood Awards</a>. It will become available for viewing once the award ceremony is held.",
-    "blocked": true,
+    "thumbnail": "Mac Cosmetics against domestic abuse",
+    "title": "Mac cosmetics",
+    "role": "Concept, AD",
+    "author": "Team: Mehdi Bouktache; Vika Randrup;",
+    "description": "Domestic violence is still a huge problem today and it is not talked about enough in our society. In most cases, victims use makeup to cover traces of physical violence. With the #MyReality campaign, we want to raise awareness and use a new product design as a conversation starter.",
+    "preview": "mac-cosmetics.webp",
     "works": [
       {
         "type": "image",
         "details": {
-          "src": "previews/more-stuff.webp",
-          "width": 300,
-          "height": 300
-        }        
+          "src": "7/mac-cosmetics.webp",
+          "width": 640,
+          "height": 360
+        }
       }
     ]
   },
   {
     "id": 8,
-    "thumbnail": "Candy Crush - Moms vs Noobs",
-    "title": "Candy Crush - Moms vs Noobs",
-    "author": "Coming soon...",
-    "preview": "candy-crush.webp",
-    "description": "This work is currently submitted to <a style='text-decoration: underline;' href='https://www.dandad.org/en/d-ad-new-blood-awards/' target='_blank' rel='noopener noreferrer'>D&AD New Blood Awards</a>. It will become available for viewing once the award ceremony is held.",    
-    "blocked": true,
+    "thumbnail": "E-scooter app design",
+    "title": "E-scooter app design",
+    "preview": "e-scooter.webp",
+    "role": "AD, UX/UI design",
+    "description": "This is my final project for UX/UI design basics course at 303Px - Graphic Design School in Tbilisi, Georgia. The objective of the project was to create e-scooter app design. In recent years, electronic scooters became widely popular in Tbilisi, as part of the city trends of catching up with the rest of the world. I designed the app taking into account younger generation being the target audience for the app. For that reason main inspiration of my design was Tbilisi street art.",
     "works": [
       {
         "type": "image",
         "details": {
-          "src": "previews/more-stuff.webp",
-          "width": 300,
-          "height": 300
-        }        
+          "src": "8/Artboard 1.webp",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "8/Artboard 2.webp",
+          "width": 640,
+          "height": 360
+        }
+      },
+      {
+        "type": "image",
+        "details": {
+          "src": "8/Artboard 3.webp",
+          "width": 640,
+          "height": 360
+        }
       }
-    ]    
+    ]
   }
 ]

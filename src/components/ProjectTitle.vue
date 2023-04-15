@@ -22,7 +22,7 @@ export default {
     },
     role: {
       type: String,
-      required: true,
+      required: false,
     },
     author: {
       type: String,
