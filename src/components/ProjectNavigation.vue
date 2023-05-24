@@ -20,7 +20,6 @@
 </template>
 
 <script>
-// TODO: remove hardcoded block
 export default {
   props: {
     current: {
@@ -31,11 +30,9 @@ export default {
   data() {
     return {
       pagesCount: 0,
-      blocked: false,
     };
   },
   created() {
-    this.blocked = !window.localStorage.getItem("enabled");
     this.pagesCount = 8
   },
   computed: {
@@ -46,11 +43,10 @@ export default {
       return this.current === this.pagesCount;
     },
     nextEnabledPage() {
-      // just ew
-      return this.blocked && this.current === 2 ? 4 : this.current + 1
+      return this.current + 1
     },
     prevEnabledPage() {
-      return this.blocked && this.current === 4 ? 2 : this.current - 1
+      return this.current - 1
     }
   },
   methods: {
