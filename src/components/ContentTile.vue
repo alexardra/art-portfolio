@@ -1,20 +1,23 @@
 <template>
-<div 
-  class="content"
-  :class="{
-    'top': top,
-    'right': right,
-    'bottom': bottom,
-    'left': left,
-  }"
->
-  <button>
-    <router-link to="/work/1" :key="$route.path">Check out this work</router-link>
-  </button>
-  <div class="mt-3 small">
-    (For now this is a placeholder, each portfolio work will be presented here and will have a way to navigate to page dedicated to each project)
+  <div
+    class="content"
+    :class="{
+      top: top,
+      right: right,
+      bottom: bottom,
+      left: left,
+    }"
+  >
+    <button>
+      <router-link to="/work/1" :key="$route.path"
+        >Check out this work</router-link
+      >
+    </button>
+    <div class="mt-3 small">
+      (For now this is a placeholder, each portfolio work will be presented here
+      and will have a way to navigate to page dedicated to each project)
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -35,9 +38,9 @@ export default {
     left: {
       type: Boolean,
       default: true,
-    } 
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -46,7 +49,7 @@ export default {
 }
 
 .content:hover {
-  border: 2px solid #FF6666;
+  border: 2px solid #ff6666;
 }
 
 .top {
@@ -54,7 +57,7 @@ export default {
 }
 
 .top:hover {
-  border-top: 2px solid #FF6666;
+  border-top: 2px solid #ff6666;
 }
 
 .right {
@@ -62,21 +65,21 @@ export default {
 }
 
 .right:hover {
-  border-right: 2px solid #FF6666;
+  border-right: 2px solid #ff6666;
 }
 
 .bottom {
   border-bottom: 2px solid #242424;
 }
 .bottom:hover {
-  border-bottom: 2px solid #FF6666;
+  border-bottom: 2px solid #ff6666;
 }
 .left {
   border-left: 2px solid #242424;
 }
 
 .left:hover {
-  border-left: 2px solid #FF6666;
+  border-left: 2px solid #ff6666;
 }
 
 button {

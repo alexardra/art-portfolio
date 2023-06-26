@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "core-js": "^3.31.0",
@@ -22,6 +23,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-vue": "^9.15.1",
     "file-loader": "^6.2.0",
+    "prettier": "^2.8.8",
     "url-loader": "^4.1.1",
     "vite": "^4.3.9"
   },

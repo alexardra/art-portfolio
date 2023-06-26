@@ -33,7 +33,7 @@ export default {
     };
   },
   created() {
-    this.pagesCount = 8
+    this.pagesCount = 8;
   },
   computed: {
     prevDisabled() {
@@ -43,11 +43,11 @@ export default {
       return this.current === this.pagesCount;
     },
     nextEnabledPage() {
-      return this.current + 1
+      return this.current + 1;
     },
     prevEnabledPage() {
-      return this.current - 1
-    }
+      return this.current - 1;
+    },
   },
   methods: {
     goToPrev() {

@@ -1,14 +1,14 @@
 <template>
-<Suspense>
-  <div class="content bg">
-    <slot></slot>
-  </div>
-  <template #fallback>
-    <div class="content bg-fallback">
+  <Suspense>
+    <div class="content bg">
       <slot></slot>
     </div>
-  </template>  
-</Suspense>
+    <template #fallback>
+      <div class="content bg-fallback">
+        <slot></slot>
+      </div>
+    </template>
+  </Suspense>
 </template>
 
 <style scoped>

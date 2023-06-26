@@ -1,15 +1,13 @@
 <template>
-<component 
-  :is="pageWrapperComponent"
->
-  <template #default>
-    <slot></slot>
-  </template>
-</component>
+  <component :is="pageWrapperComponent">
+    <template #default>
+      <slot></slot>
+    </template>
+  </component>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   props: {
@@ -21,14 +19,10 @@ export default {
   computed: {
     pageWrapperComponent() {
       return {
-        'light': defineAsyncComponent(
-          () => import('./PageWrapperLight.vue'),
-        ),
-        'dark': defineAsyncComponent(
-          () => import('./PageWrapperDark.vue'),
-        ),        
-      }[this.mode]
+        light: defineAsyncComponent(() => import("./PageWrapperLight.vue")),
+        dark: defineAsyncComponent(() => import("./PageWrapperDark.vue")),
+      }[this.mode];
     },
   },
-}
+};
 </script>

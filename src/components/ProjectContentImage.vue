@@ -1,10 +1,6 @@
 <template>
   <div class="tile-container" :style="styles">
-    <img
-      @click="showFullscreen"
-      :src="import(`../assets/${src}`)"
-      :alt="src"
-    />
+    <img @click="showFullscreen" :src="import(`../assets/${src}`)" :alt="src" />
   </div>
 </template>
 
@@ -30,11 +26,11 @@ export default {
     height: {
       type: Number,
       required: false,
-    }
+    },
   },
   computed: {
     styles() {
-      return `max-width: ${this.width}px; max-height: ${this.height}px; margin: auto;`
+      return `max-width: ${this.width}px; max-height: ${this.height}px; margin: auto;`;
     },
   },
   methods: {

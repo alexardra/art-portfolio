@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import MainFooter from '@/components/MainFooter.vue'
+import MainFooter from "@/components/MainFooter.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     MainFooter,
-  }
-}
+  },
+};
 </script>

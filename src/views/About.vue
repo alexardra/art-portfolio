@@ -1,14 +1,14 @@
 <template>
-<AboutSection />
+  <AboutSection />
 </template>
 
 <script>
-import AboutSection from '@/components/AboutSection.vue'
+import AboutSection from "@/components/AboutSection.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     AboutSection,
-  }
-}
+  },
+};
 </script>

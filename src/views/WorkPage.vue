@@ -39,7 +39,7 @@ export default {
     const response = await fetch("/projects.json");
     const file = await response.json();
     console.log("cool file", file);
-    this.allProjects = file
+    this.allProjects = file;
   },
   computed: {
     currentBorderGrid() {
@@ -58,8 +58,7 @@ export default {
       });
     },
     projects() {
-      if (this.allProjects === null)
-        return []
+      if (this.allProjects === null) return [];
 
       return this.allProjects.map((project) => ({
         id: project.id,

@@ -1,3 +1,3 @@
 <template>
-<div class="w-logo h-logo"></div>
+  <div class="w-logo h-logo"></div>
 </template>

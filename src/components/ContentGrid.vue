@@ -1,19 +1,19 @@
 <template>
-<section class="main p-3">
-  <ContentTile 
-    v-for="i in tiles"
-    :key="`tile-${i}`"
-    class="container"
-    :left="i % columns === 1"
-    :right="i % columns === 0"
-    :top="i <= columns"
-    :bottom="i > tiles - columns"
-  />
-</section>
+  <section class="main p-3">
+    <ContentTile
+      v-for="i in tiles"
+      :key="`tile-${i}`"
+      class="container"
+      :left="i % columns === 1"
+      :right="i % columns === 0"
+      :top="i <= columns"
+      :bottom="i > tiles - columns"
+    />
+  </section>
 </template>
 
 <script>
-import ContentTile from './ContentTile.vue'
+import ContentTile from "./ContentTile.vue";
 
 export default {
   components: {
@@ -27,14 +27,14 @@ export default {
     rows: {
       type: Number,
       default: 2,
-    }
+    },
   },
   computed: {
     tiles() {
-      return this.columns * this.rows
+      return this.columns * this.rows;
     },
   },
-}
+};
 </script>
 
 <style scoped>

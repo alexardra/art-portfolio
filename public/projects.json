@@ -107,7 +107,7 @@
           "src": "3/Deliverable.mp4",
           "width": 640,
           "height": 360
-        }      
+        }
       },
       {
         "type": "image",
@@ -115,7 +115,7 @@
           "src": "3/Supporting image 1.jpg",
           "width": 640,
           "height": 360
-        }      
+        }
       },
       {
         "type": "image",
@@ -123,7 +123,7 @@
           "src": "3/Supporting image 2.jpg",
           "width": 640,
           "height": 360
-        }      
+        }
       },
       {
         "type": "image",
@@ -131,7 +131,7 @@
           "src": "3/Supporting image 3.jpg",
           "width": 640,
           "height": 360
-        }      
+        }
       },
       {
         "type": "image",
@@ -139,7 +139,7 @@
           "src": "3/Supporting image 4.jpg",
           "width": 640,
           "height": 360
-        }      
+        }
       }
     ]
   },
@@ -242,7 +242,7 @@
           "width": 640,
           "height": 360
         }
-      },   
+      },
       {
         "type": "image",
         "details": {
@@ -274,9 +274,9 @@
           "width": 640,
           "height": 360
         }
-      }                          
-    ]    
-  },  
+      }
+    ]
+  },
   {
     "id": 7,
     "thumbnail": "Mac Cosmetics against domestic abuse",

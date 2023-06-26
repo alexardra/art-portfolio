@@ -1,5 +1,3 @@
-import choices from './choices'
+import choices from "./choices";
 
-export {
-  choices
-}
+export { choices };

@@ -1,13 +1,7 @@
 <template>
   <router-link :to="to">
     <div
-      class="
-        arrangements-stack
-        outer-p
-        align-items-start
-        h-100
-        position-relative
-      "
+      class="arrangements-stack outer-p align-items-start h-100 position-relative"
     >
       <div class="d-flex justify-center h-100 w-100">
         <img

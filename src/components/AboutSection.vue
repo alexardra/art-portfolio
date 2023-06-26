@@ -20,15 +20,13 @@
           href="https://letterboxd.com/Ani2/"
           rel="noopener noreferrer"
           target="_blank"
-        ></a>                
+        ></a>
       </div>
     </div>
   </div>
 </template>
 
-/**
- image size: 715 x 818
-*/
+/** image size: 715 x 818 */
 <style scoped>
 .main {
   position: relative;
@@ -59,7 +57,7 @@
   width: 20%;
   height: 5%;
   /* border: 1px solid blue; */
-} 
+}
 
 .link-container-movies {
   position: absolute;

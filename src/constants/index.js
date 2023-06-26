@@ -1,5 +1,3 @@
-import display from "./display"
+import display from "./display";
 
-export {
-  display
-}
+export { display };

@@ -1,13 +1,13 @@
 <template>
-<lazy-component tag="div">
-  <video :key="src" controls>
-    <source :src="import(`../assets/${src}`)" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</lazy-component>
+  <lazy-component tag="div">
+    <video :key="src" controls>
+      <source :src="import(`../assets/${src}`)" type="video/mp4" />
+      Your browser does not support HTML video.
+    </video>
+  </lazy-component>
 </template>
 
-<script>  
+<script>
 export default {
   props: {
     src: {
@@ -21,13 +21,14 @@ export default {
     height: {
       type: Number,
       required: false,
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
-video, div {
+video,
+div {
   width: 100%;
   height: 100%;
 }

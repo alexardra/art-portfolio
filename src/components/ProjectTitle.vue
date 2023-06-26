@@ -7,8 +7,7 @@
       class="d-flex flex-direction-column align-items-start subtitle-container"
     >
       <span v-if="role" class="subtitle dark"> Role: {{ role }}; </span>
-      <span v-if="author" v-html="author" class="subtitle dark">
-      </span>
+      <span v-if="author" v-html="author" class="subtitle dark"> </span>
     </div>
   </div>
 </template>

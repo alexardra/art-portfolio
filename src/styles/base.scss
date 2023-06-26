@@ -1,4 +1,4 @@
-@use 'sass:map';
+@use "sass:map";
 
 @import "arrangements.scss";
 
@@ -47,12 +47,12 @@ a {
 }
 
 .bg {
-  background-image: url('@/assets/background-dark.svg')
+  background-image: url("@/assets/background-dark.svg");
 }
 
-$red: #FF6666;
+$red: #ff6666;
 $dark: #242424;
-$light: #F6F5EC;
+$light: #f6f5ec;
 
 .bg-dark {
   background-color: $dark;
@@ -174,7 +174,8 @@ $h-body: calc(100vh - $h-header - $h-footer);
   -webkit-filter: blur(2px);
 }
 
-@media only screen and (min-width: 480px) {}
+@media only screen and (min-width: 480px) {
+}
 
 @media only screen and (max-width: 600px) {
   $w-logo: 35px;
@@ -191,8 +192,8 @@ $h-body: calc(100vh - $h-header - $h-footer);
 
 @media only screen and (max-width: 640px) {
   body {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
   }
 
   .w-footer {
@@ -209,8 +210,11 @@ $h-body: calc(100vh - $h-header - $h-footer);
   }
 }
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+}
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+}
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+}

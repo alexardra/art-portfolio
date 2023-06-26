@@ -1,19 +1,17 @@
 <template>
-<button
-  :class="color"
->
-  <a href="mailto:anniebarbakadze@gmail.com">Contact</a>
-</button>  
+  <button :class="color">
+    <a href="mailto:anniebarbakadze@gmail.com">Contact</a>
+  </button>
 </template>
 
 <script>
 export default {
   computed: {
     color() {
-      return this.$root.mode === 'dark' ? 'light' : 'dark'
-    }
-  }
-}
+      return this.$root.mode === "dark" ? "light" : "dark";
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -26,6 +24,6 @@ button {
 }
 
 button:hover {
-  color: #FF6666;
+  color: #ff6666;
 }
 </style>

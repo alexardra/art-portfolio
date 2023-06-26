@@ -1,28 +1,28 @@
 <template>
-<div class="position-relative">
-  <button
-    v-if="showNavigation && !prevDisabled"
-    @click.stop="goToPrev"
-    class="nav-item"
-    :style="`left: 0px; width: ${this.navItemSize}px;`"
-  >
-    <img src="@/assets/left-arrow.png" />
-  </button>
-  <slot
-    name="content"
-    :currentTile="currentTile"
-    :tileIndex="currentTileIndex"
-  ></slot>
-  <button
-    v-if="showNavigation && !nextDisabled"
-    @click.stop="goToNext"
-    class="nav-item"
-    :style="`right: 0px; width: ${this.navItemSize}px;`"
-    :disabled="nextDisabled"
-  >
-    <img src="@/assets/right-arrow.png" />
-  </button>
-</div>
+  <div class="position-relative">
+    <button
+      v-if="showNavigation && !prevDisabled"
+      @click.stop="goToPrev"
+      class="nav-item"
+      :style="`left: 0px; width: ${this.navItemSize}px;`"
+    >
+      <img src="@/assets/left-arrow.png" />
+    </button>
+    <slot
+      name="content"
+      :currentTile="currentTile"
+      :tileIndex="currentTileIndex"
+    ></slot>
+    <button
+      v-if="showNavigation && !nextDisabled"
+      @click.stop="goToNext"
+      class="nav-item"
+      :style="`right: 0px; width: ${this.navItemSize}px;`"
+      :disabled="nextDisabled"
+    >
+      <img src="@/assets/right-arrow.png" />
+    </button>
+  </div>
 </template>
 
 <script>
@@ -38,7 +38,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'small', // small, large
+      default: "small", // small, large
     },
   },
   data() {
@@ -60,7 +60,7 @@ export default {
       return this.currentTileIndex === this.content.length - 1;
     },
     navItemSize() {
-      return this.size === 'small' ? 25 : 50
+      return this.size === "small" ? 25 : 50;
     },
   },
   methods: {
@@ -78,7 +78,7 @@ export default {
         this.currentTileIndex = this.startIndex;
       },
     },
-  }
+  },
 };
 </script>
 

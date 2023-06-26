@@ -1,14 +1,6 @@
 <template>
   <footer
-    class="
-      w-footer
-      outer-p
-      bg-dark
-      light
-      d-flex
-      align-items-center
-      justify-center
-    "
+    class="w-footer outer-p bg-dark light d-flex align-items-center justify-center"
   >
     <p>© Ani Barbakadze</p>
     <p class="c-text">
@@ -31,7 +23,6 @@
     </Suspense>
   </footer>
 </template>
-
 
 <style scoped>
 footer {

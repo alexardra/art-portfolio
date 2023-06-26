@@ -1,26 +1,26 @@
 <template>
-<div class="modal-window">
-  <div class="modal">
-    <NavigationWrapper
-      id="fullscreen"
-      size="large"
-      :content="content"
-      :startIndex="startTileIndex"
-    >
-      <template v-slot:content="{ currentTile }">
-        <img
-          class="border-dark"
-          :src="import(`../assets/${currentTile.details.src}`)"
-          :alt="currentTile.details.src"
-        />
-      </template>
-    </NavigationWrapper>
+  <div class="modal-window">
+    <div class="modal">
+      <NavigationWrapper
+        id="fullscreen"
+        size="large"
+        :content="content"
+        :startIndex="startTileIndex"
+      >
+        <template v-slot:content="{ currentTile }">
+          <img
+            class="border-dark"
+            :src="import(`../assets/${currentTile.details.src}`)"
+            :alt="currentTile.details.src"
+          />
+        </template>
+      </NavigationWrapper>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
-import NavigationWrapper from './NavigationWrapper.vue'
+import NavigationWrapper from "./NavigationWrapper.vue";
 
 export default {
   components: {
@@ -28,13 +28,13 @@ export default {
   },
   computed: {
     content() {
-      return this.$root.galleryOptions.content
-    }, 
+      return this.$root.galleryOptions.content;
+    },
     startTileIndex() {
-      return this.$root.galleryOptions.startTileIndex
+      return this.$root.galleryOptions.startTileIndex;
     },
   },
-}
+};
 </script>
 
 <style scoped>

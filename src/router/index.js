@@ -1,19 +1,19 @@
-import { createWebHistory, createRouter } from 'vue-router';
-import MainPage from '@/views/MainPage.vue'
-import About from '@/views/About.vue'
-import Contact from '@/views/Contact.vue'
-import Starsheep from '@/views/Starsheep.vue'
-import WorkPage from '@/views/WorkPage.vue'
-import ProjectPage from '@/views/ProjectPage.vue'
-import ProjectBlockedPage from '@/views/ProjectBlockedPage.vue'
+import { createWebHistory, createRouter } from "vue-router";
+import MainPage from "@/views/MainPage.vue";
+import About from "@/views/About.vue";
+import Contact from "@/views/Contact.vue";
+import Starsheep from "@/views/Starsheep.vue";
+import WorkPage from "@/views/WorkPage.vue";
+import ProjectPage from "@/views/ProjectPage.vue";
+import ProjectBlockedPage from "@/views/ProjectBlockedPage.vue";
 
 // import projects from '/projects.json';
 /* eslint-disable no-debugger */
 
 const routes = [
   {
-    path: '/',
-    name: 'MainPage',
+    path: "/",
+    name: "MainPage",
     component: MainPage,
   },
   {
@@ -60,10 +60,10 @@ const routes = [
     component: About,
   },
   {
-    path: '/work/blocked/:id',
-    name: 'ProjectBlockedPage',
+    path: "/work/blocked/:id",
+    name: "ProjectBlockedPage",
     component: ProjectBlockedPage,
-  }
+  },
 ];
 
 const router = createRouter({

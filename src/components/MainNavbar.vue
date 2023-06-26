@@ -1,13 +1,6 @@
 <template>
   <div
-    class="
-      outer-p
-      d-flex
-      justify-between
-      align-items-end
-      position-relative
-      container
-    "
+    class="outer-p d-flex justify-between align-items-end position-relative container"
     style="z-index: 1"
   >
     <div class="d-flex align-items-end">
