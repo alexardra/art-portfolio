@@ -2,7 +2,7 @@
   <div class="tile-container" :style="styles">
     <img
       @click="showFullscreen"
-      :src="require(`../assets/${src}`)"
+      :src="import(`../assets/${src}`)"
       :alt="src"
     />
   </div>

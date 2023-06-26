@@ -7,7 +7,7 @@ import WorkPage from '@/views/WorkPage.vue'
 import ProjectPage from '@/views/ProjectPage.vue'
 import ProjectBlockedPage from '@/views/ProjectBlockedPage.vue'
 
-import projects from '~/projects.json';
+// import projects from '/projects.json';
 /* eslint-disable no-debugger */
 
 const routes = [
@@ -21,29 +21,29 @@ const routes = [
     name: "Work",
     component: WorkPage,
   },
-  {
-    path: '/work/:id',
-    name: 'Project',
-    component: ProjectPage,
-    beforeEnter: (to, from, next) => {
-      const project = projects.find(project => project.id === Number(to.params.id))
+  // {
+  //   path: '/work/:id',
+  //   name: 'Project',
+  //   component: ProjectPage,
+  //   beforeEnter: (to, from, next) => {
+  //     const project = projects.find(project => project.id === Number(to.params.id))
 
-      if (!project)
-        return false
+  //     if (!project)
+  //       return false
 
-      if (!project.blocked)
-        return next()
+  //     if (!project.blocked)
+  //       return next()
 
-      const isBlockedPageEnabled = window.localStorage.getItem('enabled')
-      if (isBlockedPageEnabled)
-        return next()
+  //     const isBlockedPageEnabled = window.localStorage.getItem('enabled')
+  //     if (isBlockedPageEnabled)
+  //       return next()
 
-      next({ path: `/work/blocked/${to.params.id}` })
-    },
-    props: route => ({
-      project: projects.find(project => project.id === Number(route.params.id))
-    }),
-  },
+  //     next({ path: `/work/blocked/${to.params.id}` })
+  //   },
+  //   props: route => ({
+  //     project: projects.find(project => project.id === Number(route.params.id))
+  //   }),
+  // },
   {
     path: "/contact",
     name: "Contact",

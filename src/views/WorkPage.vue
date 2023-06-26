@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import projects from "~/projects.json";
 import WorkPageNavItem from "@/components/WorkPageNavItem.vue";
 
 export default {
@@ -33,7 +32,14 @@ export default {
   data() {
     return {
       selectedGridIndex: null,
+      allProjects: null,
     };
+  },
+  async mounted() {
+    const response = await fetch("/projects.json");
+    const file = await response.json();
+    console.log("cool file", file);
+    this.allProjects = file
   },
   computed: {
     currentBorderGrid() {
@@ -52,7 +58,10 @@ export default {
       });
     },
     projects() {
-      return projects.map((project) => ({
+      if (this.allProjects === null)
+        return []
+
+      return this.allProjects.map((project) => ({
         id: project.id,
         url: project.preview,
         preview: project.title,

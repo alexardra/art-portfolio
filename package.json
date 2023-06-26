@@ -1,45 +1,29 @@
 {
   "name": "anidrawstars",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "bootstrap": "^5.2.2",
-    "core-js": "^3.8.3",
-    "sass": "^1.55.0",
-    "sass-loader": "^13.1.0",
-    "vue": "^3.2.13",
-    "vue-lazyload": "^3.0.0-rc.2",
-    "vue-router": "^4.0.13"
+    "core-js": "^3.31.0",
+    "vue": "^3.3.4",
+    "vue-lazyload": "^3.0.0",
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
+    "@babel/core": "^7.22.5",
+    "@babel/eslint-parser": "^7.22.5",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-vue": "^9.15.1",
     "file-loader": "^6.2.0",
-    "url-loader": "^4.1.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
+    "url-loader": "^4.1.1",
+    "vite": "^4.3.9"
   },
   "browserslist": [
     "> 1%",

@@ -10,7 +10,7 @@
       <template v-slot:content="{ currentTile }">
         <img
           class="border-dark"
-          :src="require(`../assets/${currentTile.details.src}`)"
+          :src="import(`../assets/${currentTile.details.src}`)"
           :alt="currentTile.details.src"
         />
       </template>

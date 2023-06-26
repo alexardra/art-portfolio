@@ -14,7 +14,7 @@
           class="h-100"
           :style="`width: auto;`"
           :alt="preview"
-          :src="require(`../assets/previews/${url}`)"
+          :src="import(`../assets/previews/${url}`)"
         />
       </div>
       <span class="title">{{ thumbnail }}</span>

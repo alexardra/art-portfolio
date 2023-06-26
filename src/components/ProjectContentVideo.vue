@@ -1,7 +1,7 @@
 <template>
 <lazy-component tag="div">
   <video :key="src" controls>
-    <source :src="require(`../assets/${src}`)" type="video/mp4">
+    <source :src="import(`../assets/${src}`)" type="video/mp4">
     Your browser does not support HTML video.
   </video>
 </lazy-component>
