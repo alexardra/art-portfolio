@@ -1,15 +1,15 @@
 <template>
-  <router-link :to="to">
+  <router-link :to="`/work/${this.id}`">
     <div
       class="arrangements-stack outer-p align-items-start h-100 position-relative"
     >
       <div class="d-flex justify-center h-100 w-100">
-        <img
+        <!-- <img
           class="h-100"
           :style="`width: auto;`"
           :alt="preview"
-          :src="import(`../assets/previews/${url}`)"
-        />
+          :src="`@/assets/previews/${url}`"
+        /> -->
       </div>
       <span class="title">{{ thumbnail }}</span>
       <img v-if="blocked" class="icon-block" src="@/assets/block.png" />
@@ -41,12 +41,7 @@ export default {
       required: false,
     },
   },
-  computed: {
-    to() {
-      return `/work/${this.id}`;
-    },
-  },
-};
+}
 </script>
 
 <style scoped>
@@ -58,7 +53,7 @@ export default {
   font-size: 14px;
   line-height: 18px;
   color: #242424;
-  font-family: "aktiv-grotesk-extended", sans-serif;
+  font-family: 'aktiv-grotesk-extended', sans-serif;
 }
 
 .icon-block {

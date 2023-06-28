@@ -1,97 +1,52 @@
-<template>
-  <div class="main justify-center">
-    <div class="d-flex flex-direction-column">
-      <div class="d-flex flex-direction-column project-container hd-width">
-        <ProjectTitle
-          :title="project.title"
-          :role="project.role"
-          :author="project.author"
-        />
-        <ProjectContent :content="project.works" />
-        <ProjectDescription :description="project.description" />
-      </div>
-      <ProjectNavigation :current="project.id" />
-    </div>
-  </div>
-</template>
+<script setup lang="ts">
+import ProjectTitle from '@/components/ProjectTitle.vue'
+import ProjectContent from '@/components/ProjectContent.vue'
+import ProjectDescription from '@/components/ProjectDescription.vue'
+import ProjectNavigation from '@/components/ProjectNavigation.vue'
+import { onMounted, ref } from 'vue'
+import type { Project } from '@/types'
 
-<script>
-import ProjectTitle from "@/components/ProjectTitle.vue";
-import ProjectContent from "@/components/ProjectContent.vue";
-import ProjectDescription from "@/components/ProjectDescription.vue";
-import ProjectNavigation from "@/components/ProjectNavigation.vue";
+const props = defineProps<{
+  projectId: string
+}>()
 
-export default {
-  components: {
-    ProjectTitle,
-    ProjectDescription,
-    ProjectContent,
-    ProjectNavigation,
-  },
-  props: {
-    project: {
-      type: Object,
-      required: true,
-    },
-  },
-};
+const project = ref<Project | null>(null)
+
+onMounted(async () => {
+  const response = await fetch('/projects.json')
+  const file = await response.json()
+  console.log(file)
+
+  project.value = file.find((p) => p.id === Number(props.projectId))
+})
 </script>
 
-<style scoped>
-.main {
-  overflow-y: auto;
-  overflow-x: hidden;
+<template>
+  <div class="outer-mx outer-py border-dark">
+    <ProjectTitle
+      v-if="project"
+      :title="project.title"
+      :role="project.role"
+      :author="project.author"
+    />
+  </div>
+
+  <!-- <ProjectContent :content="project.works" /> -->
+  <!-- <ProjectDescription :description="project.description" /> -->
+  <!-- <ProjectNavigation :current="project.id" /> -->
+</template>
+
+<style scoped lang="scss">
+/* temp */
+$spacing: 20px;
+
+.outer-mx {
+  margin-left: $spacing;
+  margin-right: $spacing;
 }
 
-.main > div {
-  row-gap: 16px;
-}
-.project-container {
-  row-gap: 16px;
-  height: 650px;
-}
-
-.hd-width {
-  width: 320px;
-}
-
-.hd-height {
-  height: 180px;
-}
-
-@media only screen and (min-width: 480px) {
-  .hd-width {
-    width: 480px;
-  }
-
-  .hd-height {
-    height: 270px;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .hd-width {
-    width: 560px;
-  }
-
-  .hd-height {
-    height: 315px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .hd-width {
-    width: 640px;
-  }
-
-  .hd-height {
-    height: 360px;
-  }
-}
-
-@media only screen and (min-height: 840px) {
-  .main {
-    overflow-y: hidden;
-  }
+.outer-py {
+  padding-top: $spacing;
+  padding-bottom: $spacing;
 }
 </style>

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import WorkPageNavItem from "@/components/WorkPageNavItem.vue";
+import WorkPageNavItem from '@/components/WorkPageNavItem.vue'
 
 export default {
   components: {
@@ -20,45 +20,44 @@ export default {
   },
   count: 8,
   borderGrid: [
-    ["top", "bottom", "left"],
-    ["top", "bottom", "left"],
-    ["top", "bottom", "left"],
-    ["top", "right", "bottom", "left"],
-    ["bottom", "left"],
-    ["bottom", "left"],
-    ["bottom", "left"],
-    ["right", "bottom", "left"],
+    ['top', 'bottom', 'left'],
+    ['top', 'bottom', 'left'],
+    ['top', 'bottom', 'left'],
+    ['top', 'right', 'bottom', 'left'],
+    ['bottom', 'left'],
+    ['bottom', 'left'],
+    ['bottom', 'left'],
+    ['right', 'bottom', 'left'],
   ],
   data() {
     return {
       selectedGridIndex: null,
       allProjects: null,
-    };
+    }
   },
   async mounted() {
-    const response = await fetch("/projects.json");
-    const file = await response.json();
-    console.log("cool file", file);
-    this.allProjects = file;
+    const response = await fetch('/projects.json')
+    const file = await response.json()
+    this.allProjects = file
   },
   computed: {
     currentBorderGrid() {
-      if (this.selectedGridIndex === null) return this.$options.borderGrid;
+      if (this.selectedGridIndex === null) return this.$options.borderGrid
 
       return this.$options.borderGrid.map((borders, index) => {
-        if (index === this.selectedGridIndex) return [...borders, "border-red"];
+        if (index === this.selectedGridIndex) return [...borders, 'border-red']
 
-        const isRight = index - this.selectedGridIndex === 1 && index % 4 !== 0;
-        if (isRight) return [...borders, "border-left-red"];
+        const isRight = index - this.selectedGridIndex === 1 && index % 4 !== 0
+        if (isRight) return [...borders, 'border-left-red']
 
-        const isTop = this.selectedGridIndex - index === 4;
-        if (isTop) return [...borders, "border-bottom-red"];
+        const isTop = this.selectedGridIndex - index === 4
+        if (isTop) return [...borders, 'border-bottom-red']
 
-        return borders;
-      });
+        return borders
+      })
     },
     projects() {
-      if (this.allProjects === null) return [];
+      if (this.allProjects === null) return []
 
       return this.allProjects.map((project) => ({
         id: project.id,
@@ -66,15 +65,15 @@ export default {
         preview: project.title,
         thumbnail: project.thumbnail,
         blocked: project.blocked,
-      }));
+      }))
     },
   },
   methods: {
     onMouseOver(el) {
-      this.selectedGridIndex = el;
+      this.selectedGridIndex = el
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
