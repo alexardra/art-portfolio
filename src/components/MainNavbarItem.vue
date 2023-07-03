@@ -1,22 +1,16 @@
 <template>
   <div
-    class="d-flex container align-items-center"
-    :class="{ active: active }"
+    class="flex nav-item items-center"
+    :class="{ 'nav-item-active': active }"
   >
-    <i v-if="active" class="star-icon inner-mx"></i>
-    <button
-      :class="classes"
-      :style="active ? 'font-weight: 700;' : ''"
+    <i v-if="active" class="i-active"></i>
+    <Link
+      :to="to"
+      active-class="font-bold red"
+      :class="linkClasses"
     >
-      <router-link
-        v-if="!external"
-        :to="to"
-        :key="$route.path"
-      >
-        {{ title }}
-      </router-link>
-      <a v-else target="_blank" :href="to">{{ title }} </a>
-    </button>
+      {{ title }}
+    </Link>
   </div>
 </template>
 
@@ -24,83 +18,42 @@
 import { useTheme } from '@/composables/useTheme'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import Link from './Link.vue'
 
 const props = defineProps<{
   title: string
   to: string
-  external?: boolean
   bold?: boolean
 }>()
 
 const route = useRoute()
 const theme = useTheme()
+
 const active = computed(() => {
   return route.path == props.to
 })
-const classes = computed(() => {
-  const cls = []
-
-  if (props.bold) cls.push('bold')
-
-  if (active.value) return [...cls, 'red']
-
-  return [...cls, theme.value === 'dark' ? 'light' : 'dark']
+const linkClasses = computed(() => {
+  return [
+    props.bold ? 'font-bold' : '',
+    theme.value === 'light' ? 'dark' : 'light',
+  ]
 })
 </script>
 
 <style scoped lang="scss">
-$w-icon: 10px;
-$h-icon: 10px;
-$padding: 4px;
-$space: 36px;
-
-.container {
-  padding-left: calc($space);
+.nav-item {
+  padding-left: 36px;
 }
 
-.container.active {
-  padding-left: calc(
-    $space - $padding - $padding - $w-icon
-  );
+.nav-item-active {
+  padding-left: 18px;
 }
 
-button {
-  background: transparent;
-  border: none;
-  padding: 0;
-  line-height: 12px;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-button:hover {
-  color: #ff6666;
-}
-
-.star-icon {
-  width: $w-icon;
-  height: $h-icon;
+.i-active {
   background-image: url('@/assets/star-icon.svg');
   background-repeat: no-repeat;
-}
-
-.bold {
-  font-weight: 600;
-}
-
-@media only screen and (max-width: 600px) {
-  .star-icon {
-    display: none;
-  }
-
-  .container,
-  .container.active {
-    padding-left: 18px;
-  }
-
-  button {
-    line-height: 10px;
-    font-size: 12px;
-  }
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
 }
 </style>
