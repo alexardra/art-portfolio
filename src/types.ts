@@ -1,4 +1,4 @@
-import type { workTypesList } from './constants'
+import type { themes, workTypesList } from './constants'
 
 export type Project = {
   id: number
@@ -21,3 +21,5 @@ export type WorkDetails = {
   width?: number
   height?: number
 }
+
+export type Theme = (typeof themes)[number]

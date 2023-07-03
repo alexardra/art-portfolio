@@ -15,7 +15,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  position: fixed;
+  // position: fixed;
 }
 
 a {
@@ -25,11 +25,6 @@ a {
 
 .outer-p {
   padding: 20px;
-}
-
-.inner-mx {
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .inner-my {
@@ -82,15 +77,19 @@ $light: #f6f5ec;
   border: 1px solid $dark;
 }
 
-.d-flex {
+.flex {
   display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .align-items-start {
   align-items: flex-start;
 }
 
-.align-items-center {
+.items-center {
   align-items: center;
 }
 
@@ -102,7 +101,7 @@ $light: #f6f5ec;
   justify-content: flex-start;
 }
 
-.justify-center {
+.justify-items-center {
   justify-content: center;
 }
 
@@ -116,17 +115,6 @@ $light: #f6f5ec;
 
 .flex-direction-column {
   flex-direction: column;
-}
-
-$w-logo: 60px;
-$h-logo: 20px;
-
-.w-logo {
-  width: $w-logo;
-}
-
-.h-logo {
-  height: $h-logo;
 }
 
 $h-header: 35px;
@@ -145,6 +133,10 @@ $h-body: calc(100vh - $h-header - $h-footer);
 
 .h-100 {
   height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-100 {
@@ -174,20 +166,12 @@ $h-body: calc(100vh - $h-header - $h-footer);
   -webkit-filter: blur(2px);
 }
 
-@media only screen and (min-width: 480px) {
+.bg-inherit {
+  background-color: inherit;
 }
 
-@media only screen and (max-width: 600px) {
-  $w-logo: 35px;
-  $h-logo: 15px;
 
-  .w-logo {
-    width: $w-logo;
-  }
-
-  .h-logo {
-    height: $h-logo;
-  }
+@media only screen and (min-width: 480px) {
 }
 
 @media only screen and (max-width: 640px) {
@@ -217,4 +201,12 @@ $h-body: calc(100vh - $h-header - $h-footer);
 }
 
 @media only screen and (min-width: 1200px) {
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.text-left {
+  text-align: left;
 }

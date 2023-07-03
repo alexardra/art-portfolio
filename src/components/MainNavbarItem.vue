@@ -1,8 +1,18 @@
 <template>
-  <div class="d-flex container align-items-center" :class="{ active: active }">
+  <div
+    class="d-flex container align-items-center"
+    :class="{ active: active }"
+  >
     <i v-if="active" class="star-icon inner-mx"></i>
-    <button :class="classes" :style="active ? 'font-weight: 700;' : ''">
-      <router-link v-if="!external" :to="to" :key="$route.path">
+    <button
+      :class="classes"
+      :style="active ? 'font-weight: 700;' : ''"
+    >
+      <router-link
+        v-if="!external"
+        :to="to"
+        :key="$route.path"
+      >
         {{ title }}
       </router-link>
       <a v-else target="_blank" :href="to">{{ title }} </a>
@@ -10,38 +20,32 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    to: {
-      type: String,
-      required: true,
-    },
-    external: {
-      type: Boolean,
-      default: false,
-    },
-    bold: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  computed: {
-    active() {
-      return this.$route.path === this.to;
-    },
-    classes() {
-      const cls = this.bold ? ["bold"] : [];
-      const color = this.$root.mode === "dark" ? "light" : "dark";
+<script setup lang="ts">
+import { useTheme } from '@/composables/useTheme'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 
-      return this.active ? [...cls, "red"] : [...cls, color];
-    },
-  },
-};
+const props = defineProps<{
+  title: string
+  to: string
+  external?: boolean
+  bold?: boolean
+}>()
+
+const route = useRoute()
+const theme = useTheme()
+const active = computed(() => {
+  return route.path == props.to
+})
+const classes = computed(() => {
+  const cls = []
+
+  if (props.bold) cls.push('bold')
+
+  if (active.value) return [...cls, 'red']
+
+  return [...cls, theme.value === 'dark' ? 'light' : 'dark']
+})
 </script>
 
 <style scoped lang="scss">
@@ -55,7 +59,9 @@ $space: 36px;
 }
 
 .container.active {
-  padding-left: calc($space - $padding - $padding - $w-icon);
+  padding-left: calc(
+    $space - $padding - $padding - $w-icon
+  );
 }
 
 button {
@@ -74,7 +80,7 @@ button:hover {
 .star-icon {
   width: $w-icon;
   height: $h-icon;
-  background-image: url("@/assets/star-icon.svg");
+  background-image: url('@/assets/star-icon.svg');
   background-repeat: no-repeat;
 }
 

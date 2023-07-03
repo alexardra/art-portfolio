@@ -1,5 +1,5 @@
 <template>
-  <div class="outer-p main justify-center">
+  <div class="outer-p main justify-items-center">
     <form @submit.prevent="checkPass">
       <img src="@/assets/block.png" />
       <span>Enter Password to open</span>
@@ -18,23 +18,23 @@
 export default {
   data() {
     return {
-      password: "",
-    };
+      password: '',
+    }
   },
   methods: {
     checkPass() {
-      if (this.password != "bowie") {
-        this.password = "";
-        return;
+      if (this.password != 'bowie') {
+        this.password = ''
+        return
       }
 
-      window.localStorage.setItem("enabled", true);
+      window.localStorage.setItem('enabled', true)
       this.$router.push({
         path: `/work/${this.$route.params.id}`,
-      });
+      })
     },
   },
-};
+}
 </script>
 <style scoped>
 form {
@@ -81,7 +81,7 @@ form span {
 }
 
 .icon-submit {
-  background-image: url("@/assets/icon-submit.svg");
+  background-image: url('@/assets/icon-submit.svg');
   background-size: cover;
   display: inline-block;
   width: 8px;

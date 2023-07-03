@@ -1,16 +1,13 @@
 <template>
   <ContentGrid />
-  <MainFooter />
 </template>
 
 <script>
-import ContentGrid from "./ContentGrid.vue";
-import MainFooter from "@/components/MainFooter.vue";
+import ContentGrid from './ContentGrid.vue'
 
 export default {
   components: {
     ContentGrid,
-    MainFooter,
   },
-};
+}
 </script>

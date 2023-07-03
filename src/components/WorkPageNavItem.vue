@@ -3,7 +3,7 @@
     <div
       class="arrangements-stack outer-p align-items-start h-100 position-relative"
     >
-      <div class="d-flex justify-center h-100 w-100">
+      <div class="flex justify-items-center h-100 w-100">
         <!-- <img
           class="h-100"
           :style="`width: auto;`"

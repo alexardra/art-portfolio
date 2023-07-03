@@ -1,12 +1,12 @@
 <template>
-  <div class="d-flex justify-between">
+  <div class="flex justify-between">
     <button
       @click="goToPrev"
       class="dark"
       type="submit"
       :disabled="prevDisabled"
     >
-      &lt; Previous Project
+      &lt; Previous
     </button>
     <button
       @click="goToNext"
@@ -14,7 +14,7 @@
       type="submit"
       :disabled="nextDisabled"
     >
-      Next Project &gt;
+      Next &gt;
     </button>
   </div>
 </template>
@@ -30,38 +30,38 @@ export default {
   data() {
     return {
       pagesCount: 0,
-    };
+    }
   },
   created() {
-    this.pagesCount = 8;
+    this.pagesCount = 8
   },
   computed: {
     prevDisabled() {
-      return this.current === 1;
+      return this.current === 1
     },
     nextDisabled() {
-      return this.current === this.pagesCount;
+      return this.current === this.pagesCount
     },
     nextEnabledPage() {
-      return this.current + 1;
+      return this.current + 1
     },
     prevEnabledPage() {
-      return this.current - 1;
+      return this.current - 1
     },
   },
   methods: {
     goToPrev() {
       this.$router.push({
         path: `/work/${this.prevEnabledPage}`,
-      });
+      })
     },
     goToNext() {
       this.$router.push({
         path: `/work/${this.nextEnabledPage}`,
-      });
+      })
     },
   },
-};
+}
 </script>
 
 <style scoped>

@@ -9,7 +9,7 @@
           :tileIndex="tileIndex"
         />
         <template #fallback>
-          <div class="d-flex align-items-center justify-center w-100 h-100">
+          <div class="flex items-center justify-items-center w-100 h-100">
             <span>Loading ...</span>
           </div>
         </template>
@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue";
-import NavigationWrapper from "./NavigationWrapper.vue";
+import { defineAsyncComponent } from 'vue'
+import NavigationWrapper from './NavigationWrapper.vue'
 
 export default {
   components: {
@@ -36,14 +36,14 @@ export default {
     tileComponent(tile) {
       return {
         iframe: defineAsyncComponent(() =>
-          import("./ProjectContentIframe.vue")
+          import('./ProjectContentIframe.vue')
         ),
-        image: defineAsyncComponent(() => import("./ProjectContentImage.vue")),
-        video: defineAsyncComponent(() => import("./ProjectContentVideo.vue")),
-      }[tile.type];
+        image: defineAsyncComponent(() => import('./ProjectContentImage.vue')),
+        video: defineAsyncComponent(() => import('./ProjectContentVideo.vue')),
+      }[tile.type]
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div class="main align-items-center justify-center">
+  <div class="main items-center justify-items-center">
     <img id="title" src="@/assets/main-page.png" />
     <div id="overlay" class="w-overlay h-overlay"></div>
     <img class="cover" src="@/assets/main-page-stars.png" />

@@ -1,8 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router'
 import MainPage from '@/views/MainPage.vue'
-import About from '@/views/About.vue'
-import Contact from '@/views/Contact.vue'
-import Starsheep from '@/views/Starsheep.vue'
+import AboutPage from '@/views/AboutPage.vue'
 import WorkPage from '@/views/WorkPage.vue'
 import ProjectPage from '@/views/ProjectPage.vue'
 import ProjectBlockedPage from '@/views/ProjectBlockedPage.vue'
@@ -25,19 +23,9 @@ const routes = [
     props: true,
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: Contact,
-  },
-  {
-    path: '/starsheep',
-    name: 'Starsheep',
-    component: Starsheep,
-  },
-  {
     path: '/about',
     name: 'About',
-    component: About,
+    component: AboutPage,
   },
   {
     path: '/work/blocked/:id',

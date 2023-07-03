@@ -6,23 +6,22 @@
   </component>
 </template>
 
-<script>
-import { defineAsyncComponent } from "vue";
+<script setup lang="ts">
+import { computed, defineAsyncComponent } from 'vue'
+import type { Theme } from '@/types'
 
-export default {
-  props: {
-    mode: {
-      type: String,
-      required: true,
-    },
-  },
-  computed: {
-    pageWrapperComponent() {
-      return {
-        light: defineAsyncComponent(() => import("./PageWrapperLight.vue")),
-        dark: defineAsyncComponent(() => import("./PageWrapperDark.vue")),
-      }[this.mode];
-    },
-  },
-};
+const props = defineProps<{
+  theme: Theme
+}>()
+
+const pageWrapperComponent = computed(() => {
+  return {
+    light: defineAsyncComponent(
+      () => import('./PageWrapperLight.vue')
+    ),
+    dark: defineAsyncComponent(
+      () => import('./PageWrapperDark.vue')
+    ),
+  }[props.theme]
+})
 </script>

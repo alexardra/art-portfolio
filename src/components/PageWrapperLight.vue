@@ -1,12 +1,5 @@
 <template>
-  <div class="content bg-light position-relative">
+  <div class="bg-light min-h-screen">
     <slot></slot>
   </div>
 </template>
-
-<style scoped>
-.content {
-  width: 100%;
-  height: 100%;
-}
-</style>

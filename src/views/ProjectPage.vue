@@ -22,18 +22,22 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="outer-mx outer-py border-dark">
+  <div v-if="project" class="outer-mx outer-pt border-dark">
     <ProjectTitle
-      v-if="project"
       :title="project.title"
       :role="project.role"
       :author="project.author"
     />
+    <div v-for="(work, index) in project.works" :key="index" class="w-100">
+      <img :src="`/src/assets/${work.details.src}`" class="w-100" />
+    </div>
+    <div class="outer-pt">
+      <ProjectDescription :description="project.description" />
+    </div>
+    <div class="outer-pt">
+      <ProjectNavigation :current="project.id" />
+    </div>
   </div>
-
-  <!-- <ProjectContent :content="project.works" /> -->
-  <!-- <ProjectDescription :description="project.description" /> -->
-  <!-- <ProjectNavigation :current="project.id" /> -->
 </template>
 
 <style scoped lang="scss">
@@ -45,8 +49,7 @@ $spacing: 20px;
   margin-right: $spacing;
 }
 
-.outer-py {
+.outer-pt {
   padding-top: $spacing;
-  padding-bottom: $spacing;
 }
 </style>

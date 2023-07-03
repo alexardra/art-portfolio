@@ -1,6 +1,6 @@
 <template>
-  <div class="main align-items-center justify-center">
-    <div class="img-container d-flex align-items-center">
+  <div class="main items-center justify-center">
+    <div class="img-container d-flex items-center">
       <img class="avatar" src="@/assets/about-me-avatar.webp" />
       <div class="description">
         <img src="@/assets/about-me.svg" />

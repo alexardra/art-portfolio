@@ -1,10 +1,10 @@
 <template>
-  <div class="d-flex align-items-start flex-direction-column title-container">
+  <div class="flex align-items-start flex-direction-column title-container">
     <h3 class="title red">
       {{ title }}
     </h3>
     <div
-      class="d-flex flex-direction-column align-items-start subtitle-container"
+      class="flex flex-direction-column align-items-start subtitle-container"
     >
       <span v-if="role" class="subtitle dark"> Role: {{ role }}; </span>
       <span v-if="author" v-html="author" class="subtitle dark"> </span>
@@ -28,7 +28,7 @@ export default {
       required: false,
     },
   },
-};
+}
 </script>
 
 <style scoped>

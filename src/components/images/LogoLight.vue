@@ -3,18 +3,28 @@
     <Suspense>
       <img class="w-100 h-100" src="@/assets/logo-light.svg" alt="Logo" />
       <template #fallback>
-        <LogoFallback />
+        <div class="logo"></div>
       </template>
     </Suspense>
   </router-link>
 </template>
 
-<script>
-import LogoFallback from "./LogoFallback.vue";
+<style scoped lang="scss">
+@mixin change($w, $h) {
+  .logo {
+    width: $w;
+    height: $h;
+  }
+}
+// @include change($w: 35px, $h: 15px);
 
-export default {
-  components: {
-    LogoFallback,
-  },
-};
-</script>
+// $w-logo: 35px;
+// $h-logo: 15px;
+
+// $w-logo: 60px;
+// $h-logo: 20px;
+
+// @media only screen and (min-width: 600px) {
+@include change($w: 60px, $h: 20px);
+// }
+</style>
