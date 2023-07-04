@@ -76,43 +76,28 @@
     "items": [
       {
         "type": "video",
-        "details": {
-          "src": "3/Deliverable.mp4",
-          "width": 640,
-          "height": 360
-        }
+        "id": "a5a8fb26-2e5b-4896-9584-eee5aa2e2f77",
+        "src": "3/Deliverable.mp4"
       },
       {
         "type": "image",
-        "details": {
-          "src": "3/Supporting image 1.jpg",
-          "width": 640,
-          "height": 360
-        }
+        "id": "76984926-432d-40f2-a344-05f08a314e3b",
+        "src": "3/Supporting image 1.jpg"
       },
       {
         "type": "image",
-        "details": {
-          "src": "3/Supporting image 2.jpg",
-          "width": 640,
-          "height": 360
-        }
+        "id": "59db0613-7aed-463c-8c8b-a3b8fd86ea20",
+        "src": "3/Supporting image 2.jpg"
       },
       {
         "type": "image",
-        "details": {
-          "src": "3/Supporting image 3.jpg",
-          "width": 640,
-          "height": 360
-        }
+        "id": "8a67904b-56a6-44d3-9bb0-a403e128e232",
+        "src": "3/Supporting image 3.jpg"
       },
       {
         "type": "image",
-        "details": {
-          "src": "3/Supporting image 4.jpg",
-          "width": 640,
-          "height": 360
-        }
+        "id": "d83c7719-8657-4948-a559-691eebf232bf",
+        "src": "3/Supporting image 4.jpg"
       }
     ]
   },
@@ -125,43 +110,28 @@
     "items": [
       {
         "type": "image",
-        "details": {
-          "src": "4/Artboard 1.png",
-          "width": 640,
-          "height": 360
-        }
+        "id": "f2e5f4ef-a0fd-42a1-82da-98e1a9a3257e",
+        "src": "4/Artboard 1.png"
       },
       {
         "type": "image",
-        "details": {
-          "src": "4/Artboard 2.png",
-          "width": 640,
-          "height": 360
-        }
+        "id": "fa54e713-0d01-474a-83d2-0c36a23f6172",
+        "src": "4/Artboard 2.png"
       },
       {
         "type": "image",
-        "details": {
-          "src": "4/Artboard 3.png",
-          "width": 640,
-          "height": 360
-        }
+        "id": "8d6ba009-d7d9-4fd3-a04e-0d4b733c9912",
+        "src": "4/Artboard 3.png"
       },
       {
         "type": "image",
-        "details": {
-          "src": "4/Artboard 4.png",
-          "width": 640,
-          "height": 360
-        }
+        "id": "fe8e0a10-4522-416a-8c86-7428b5577f83",
+        "src": "4/Artboard 4.png"
       },
       {
         "type": "image",
-        "details": {
-          "src": "4/Artboard 5.png",
-          "width": 640,
-          "height": 360
-        }
+        "id": "2af77f44-0ba0-423e-98be-a779dfec7ce0",
+        "src": "4/Artboard 5.png"
       }
     ]
   },
@@ -175,11 +145,8 @@
     "items": [
       {
         "type": "image",
-        "details": {
-          "src": "5/honest-diapers.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "a8591274-6ae2-4801-b2e2-76eb3398c503",
+        "src": "5/honest-diapers.webp"
       }
     ]
   },
@@ -194,59 +161,38 @@
     "items": [
       {
         "type": "image",
-        "details": {
-          "src": "6/1.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "2c6481be-5bdd-4178-8e0c-9b6fcad02e7f",
+        "src": "6/1.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "6/2.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "20d6a1c5-32f4-4489-b3b8-35d486af44ad",
+        "src": "6/2.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "6/3.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "7b35f36b-13cf-45bb-9605-17d5cbc89d71",
+        "src": "6/3.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "6/4.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "9faee16f-978e-4b1f-a8c5-b95561e45136",
+        "src": "6/4.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "6/5.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "dc9cdee6-74f5-4735-9d31-967bccead5e6",
+        "src": "6/5.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "6/6.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "74b7a4a0-0da4-4bc5-ae64-a99585ace67e",
+        "src": "6/6.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "6/7.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "44f2c447-0274-48c4-b3c3-3026400428ce",
+        "src": "6/7.webp"
       }
     ]
   },
@@ -261,11 +207,8 @@
     "items": [
       {
         "type": "image",
-        "details": {
-          "src": "7/mac-cosmetics.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "c9b3497c-c165-496e-91dd-9809045b3692",
+        "src": "7/mac-cosmetics.webp"
       }
     ]
   },
@@ -279,27 +222,18 @@
     "items": [
       {
         "type": "image",
-        "details": {
-          "src": "8/Artboard 1.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "f0e80952-e8f3-41f7-8bf1-ad83852b78df",
+        "src": "8/Artboard 1.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "8/Artboard 2.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "9623ca26-b841-4377-8d2c-f1a9cb522eaa",
+        "src": "8/Artboard 2.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "8/Artboard 3.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "56ec5e73-0eb2-4d08-b1f5-ce641338bc18",
+        "src": "8/Artboard 3.webp"
       }
     ]
   }

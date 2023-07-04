@@ -1,30 +1,42 @@
 <template>
-  <lazy-component tag="div">
-    <iframe
-      frameborder="0"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen
-      :src="src"
+  <div class="p-20">
+    <div
+      class="flex border-dark items-center justify-items-center"
+      :style="{
+        width: `${width + 2}px`,
+        height: `${height + 2}px`,
+      }"
     >
-    </iframe>
-  </lazy-component>
+      <Spinner v-if="!loaded" />
+      <iframe
+        v-show="loaded"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        @load="loaded = true"
+        :src="src"
+        :width="width"
+        :height="height"
+      >
+      </iframe>
+    </div>
+  </div>
 </template>
 
-<script>
-export default {
-  props: {
-    src: {
-      type: String,
-      required: true,
-    },
-  },
-};
-</script>
+<script setup lang="ts">
+import Spinner from './Spinner.vue'
+import { ref } from 'vue'
 
-<style scoped>
-div,
-iframe {
-  width: 100%;
-  height: 100%;
+type Props = {
+  src: string
+  width?: number
+  height?: number
 }
-</style>
+
+withDefaults(defineProps<Props>(), {
+  width: 640,
+  height: 360,
+})
+
+const loaded = ref(false)
+</script>

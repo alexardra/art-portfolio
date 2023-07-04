@@ -14,8 +14,9 @@
       >
     </button>
     <div class="mt-3 small">
-      (For now this is a placeholder, each portfolio work will be presented here
-      and will have a way to navigate to page dedicated to each project)
+      (For now this is a placeholder, each portfolio work
+      will be presented here and will have a way to navigate
+      to page dedicated to each project)
     </div>
   </div>
 </template>
@@ -40,46 +41,48 @@ export default {
       default: true,
     },
   },
-};
+}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@/styles/variables.scss';
+
 .content {
-  border: 1px solid #242424;
+  border: 1px solid $dark;
 }
 
 .content:hover {
-  border: 2px solid #ff6666;
+  border: 2px solid $red;
 }
 
 .top {
-  border-top: 2px solid #242424;
+  border-top: 2px solid $dark;
 }
 
 .top:hover {
-  border-top: 2px solid #ff6666;
+  border-top: 2px solid $red;
 }
 
 .right {
-  border-right: 2px solid #242424;
+  border-right: 2px solid $dark;
 }
 
 .right:hover {
-  border-right: 2px solid #ff6666;
+  border-right: 2px solid $red;
 }
 
 .bottom {
-  border-bottom: 2px solid #242424;
+  border-bottom: 2px solid $dark;
 }
 .bottom:hover {
-  border-bottom: 2px solid #ff6666;
+  border-bottom: 2px solid $red;
 }
 .left {
-  border-left: 2px solid #242424;
+  border-left: 2px solid $dark;
 }
 
 .left:hover {
-  border-left: 2px solid #ff6666;
+  border-left: 2px solid $red;
 }
 
 button {

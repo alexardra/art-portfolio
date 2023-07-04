@@ -1,35 +1,16 @@
 <template>
-  <lazy-component tag="div">
-    <video :key="src" controls>
-      <source :src="import(`../assets/${src}`)" type="video/mp4" />
-      Your browser does not support HTML video.
-    </video>
-  </lazy-component>
+  <video :key="src" controls class="w-100 h-100">
+    <source :src="url" type="video/mp4" />
+    Your browser does not support HTML video.
+  </video>
 </template>
 
-<script>
-export default {
-  props: {
-    src: {
-      type: String,
-      required: true,
-    },
-    width: {
-      type: Number,
-      required: false,
-    },
-    height: {
-      type: Number,
-      required: false,
-    },
-  },
-};
-</script>
+<script setup lang="ts">
+import { useImage } from '@/composables/useImage'
 
-<style scoped>
-video,
-div {
-  width: 100%;
-  height: 100%;
-}
-</style>
+const props = defineProps<{
+  src: string
+}>()
+
+const url = useImage(`/src/assets/${props.src}`)
+</script>

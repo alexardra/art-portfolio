@@ -8,13 +8,15 @@
 export default {
   computed: {
     color() {
-      return this.$root.mode === "dark" ? "light" : "dark";
+      return this.$root.mode === 'dark' ? 'light' : 'dark'
     },
   },
-};
+}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@/styles/variables.scss';
+
 button {
   background: transparent;
   border: none;
@@ -24,6 +26,6 @@ button {
 }
 
 button:hover {
-  color: #ff6666;
+  color: $red;
 }
 </style>

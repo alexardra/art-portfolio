@@ -1,6 +1,9 @@
 <template>
   <div class="p-20">
-    <p class="m-0 text-sm" v-html="description"></p>
+    <p
+      class="m-0 text-base text-left"
+      v-html="description"
+    ></p>
   </div>
 </template>
 

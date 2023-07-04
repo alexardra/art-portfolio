@@ -42,19 +42,27 @@ export default {
   },
   computed: {
     currentBorderGrid() {
-      if (this.selectedGridIndex === null) return this.$options.borderGrid
+      if (this.selectedGridIndex === null)
+        return this.$options.borderGrid
 
-      return this.$options.borderGrid.map((borders, index) => {
-        if (index === this.selectedGridIndex) return [...borders, 'border-red']
+      return this.$options.borderGrid.map(
+        (borders, index) => {
+          if (index === this.selectedGridIndex)
+            return [...borders, 'border-red']
 
-        const isRight = index - this.selectedGridIndex === 1 && index % 4 !== 0
-        if (isRight) return [...borders, 'border-left-red']
+          const isRight =
+            index - this.selectedGridIndex === 1 &&
+            index % 4 !== 0
+          if (isRight)
+            return [...borders, 'border-left-red']
 
-        const isTop = this.selectedGridIndex - index === 4
-        if (isTop) return [...borders, 'border-bottom-red']
+          const isTop = this.selectedGridIndex - index === 4
+          if (isTop)
+            return [...borders, 'border-bottom-red']
 
-        return borders
-      })
+          return borders
+        }
+      )
     },
     projects() {
       if (this.allProjects === null) return []
@@ -77,8 +85,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$red: #ff6666;
-$dark: #242424;
+@import '@/styles/variables.scss';
 
 .outer-p {
   padding: 10px;

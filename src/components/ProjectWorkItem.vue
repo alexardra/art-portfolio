@@ -1,12 +1,5 @@
 <template>
-  <div>
-    <Suspense>
-      <component :is="workItemComponent" :src="item.src" />
-      <template #fallback>
-        <span>Loading ... TODO</span>
-      </template>
-    </Suspense>
-  </div>
+  <component :is="workItemComponent" :src="item.src" />
 </template>
 
 <script setup lang="ts">
