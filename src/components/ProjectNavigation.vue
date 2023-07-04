@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-between">
+  <div class="flex justify-between py-20">
     <button
       @click="goToPrev"
-      class="dark"
+      class="dark text-lg font-bold"
       type="submit"
       :disabled="prevDisabled"
     >
@@ -10,7 +10,7 @@
     </button>
     <button
       @click="goToNext"
-      class="dark"
+      class="dark text-lg font-bold"
       type="submit"
       :disabled="nextDisabled"
     >
@@ -19,62 +19,36 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    current: {
-      type: Number,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      pagesCount: 0,
-    }
-  },
-  created() {
-    this.pagesCount = 8
-  },
-  computed: {
-    prevDisabled() {
-      return this.current === 1
-    },
-    nextDisabled() {
-      return this.current === this.pagesCount
-    },
-    nextEnabledPage() {
-      return this.current + 1
-    },
-    prevEnabledPage() {
-      return this.current - 1
-    },
-  },
-  methods: {
-    goToPrev() {
-      this.$router.push({
-        path: `/work/${this.prevEnabledPage}`,
-      })
-    },
-    goToNext() {
-      this.$router.push({
-        path: `/work/${this.nextEnabledPage}`,
-      })
-    },
-  },
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+
+const props = defineProps<{
+  current: number
+  pageCount: number
+}>()
+
+const router = useRouter()
+
+const prevDisabled = computed(() => props.current === 1)
+const nextDisabled = computed(
+  () => props.current === props.pageCount
+)
+
+const goToPrev = () => {
+  router.push(`/work/${props.current - 1}`)
+}
+const goToNext = () => {
+  router.push(`/work/${props.current + 1}`)
 }
 </script>
 
 <style scoped>
 button {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 18px;
   outline: none;
   background: inherit;
   border: 0;
   padding: 0;
-  cursor: pointer;
-  margin-bottom: 15px;
 }
 
 button:hover {
@@ -83,11 +57,5 @@ button:hover {
 
 button:disabled {
   color: #bfbebe;
-}
-
-@media only screen and (min-width: 600px) {
-  button {
-    font-size: 14px;
-  }
 }
 </style>

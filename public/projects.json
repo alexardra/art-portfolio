@@ -7,14 +7,11 @@
     "preview": "gaia.webp",
     "role": "AD, Animation, illustration",
     "author": "Team: Taylor Henderson; Risha George;",
-    "works": [
+    "items": [
       {
         "type": "iframe",
-        "details": {
-          "src": "https://player.vimeo.com/video/749237571?h=b81a77be24",
-          "width": 640,
-          "height": 360
-        }
+        "id": "97753b4e-08c8-4e85-aba9-ada011aac8fb",
+        "src": "https://player.vimeo.com/video/749237571?h=b81a77be24"
       }
     ]
   },
@@ -25,70 +22,46 @@
     "description": "I made this project as a part of copywriting class with mentor Käthe Trumbach. The emphasis of the project is on a copy. The brand has a history of fighting for human rights so I focused on that aspect and created a campaign to fight against patriarchal norms and homophobia.\n\nAs coming out is an important and difficult step in life for LGBTQ+ people, campaign is aimed at normalizing the process and making it part of our everyday lives.",
     "preview": "ben-and-jerry.webp",
     "role": "Concept, Copy",
-    "works": [
+    "items": [
       {
         "type": "image",
-        "details": {
-          "src": "2/1 Cocnept.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "9e10a5d7-8a25-45be-8c5d-f53906e6f768",
+        "src": "2/1 Cocnept.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "2/2 Headlines.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "898c8a80-0270-411f-81b1-8698d3ca104d",
+        "src": "2/2 Headlines.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "2/3 Outdoor.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "834a7240-caee-4b4b-b2e0-56ea5bf1eb48",
+        "src": "2/3 Outdoor.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "2/4 outdoor.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "58e8ef75-0417-464c-9af3-99b6c80e5e04",
+        "src": "2/4 outdoor.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "2/5 outdoor.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "4b45955b-35f8-43c6-bc02-6364588b22d2",
+        "src": "2/5 outdoor.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "2/6 long copy.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "a4ef224b-e324-4fde-9898-62352f3ae475",
+        "src": "2/6 long copy.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "2/7 long copy.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "c24431fe-3606-4f06-b11a-a675f908b46c",
+        "src": "2/7 long copy.webp"
       },
       {
         "type": "image",
-        "details": {
-          "src": "2/8 long copy.webp",
-          "width": 640,
-          "height": 360
-        }
+        "id": "df3f1484-9080-4689-aa0d-0355df29591f",
+        "src": "2/8 long copy.webp"
       }
     ]
   },
@@ -100,7 +73,7 @@
     "description": "",
     "role": "AD, Concept",
     "author": "Team: Claudia Güell - CW, Concept;",
-    "works": [
+    "items": [
       {
         "type": "video",
         "details": {
@@ -149,7 +122,7 @@
     "title": "Cosmo - typeface design",
     "description": "I made this project as part of advanced typography workshop in Miami Ad School Europe.",
     "preview": "cosmo.png",
-    "works": [
+    "items": [
       {
         "type": "image",
         "details": {
@@ -199,7 +172,7 @@
     "preview": "shitty-year.webp",
     "role": "AD",
     "author": "Team: Mehdi Bouktache; Vika Randrup;",
-    "works": [
+    "items": [
       {
         "type": "image",
         "details": {
@@ -218,7 +191,7 @@
     "role": "GD, Character design",
     "author": "Game design: <a style='text-decoration: underline;' href='https://www.youtube.com/@TsibakhaGameClub' target='_blank' rel='noopener noreferrer'>Tsibakha Games</a>",
     "description": "While working in a small advertising agency back in Georgia, I got a chance to work on character design for the Robobo board game. The game was designed by the local board game club Tsibakha Games.\n\nMain theme of the game is inspired by football. In alternative world on imaginary Robobo island 11 city-states with massive gas stations battle for one ultimate goal and each city-state had it's own sets of unique robots with different capabilities and powers.\n\nMy role in the project was to design all the visual assets including character designs, logo and packaging design. The project took place in 2019.",
-    "works": [
+    "items": [
       {
         "type": "image",
         "details": {
@@ -285,7 +258,7 @@
     "author": "Team: Mehdi Bouktache; Vika Randrup;",
     "description": "Domestic violence is still a huge problem today and it is not talked about enough in our society. In most cases, victims use makeup to cover traces of physical violence. With the #MyReality campaign, we want to raise awareness and use a new product design as a conversation starter.",
     "preview": "mac-cosmetics.webp",
-    "works": [
+    "items": [
       {
         "type": "image",
         "details": {
@@ -303,7 +276,7 @@
     "preview": "e-scooter.webp",
     "role": "AD, UX/UI design",
     "description": "This is my final project for UX/UI design basics course at 303Px - Graphic Design School in Tbilisi, Georgia. The objective of the project was to create e-scooter app design. In recent years, electronic scooters became widely popular in Tbilisi, as part of the city trends of catching up with the rest of the world. I designed the app taking into account younger generation being the target audience for the app. For that reason main inspiration of my design was Tbilisi street art.",
-    "works": [
+    "items": [
       {
         "type": "image",
         "details": {

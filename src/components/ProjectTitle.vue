@@ -1,67 +1,21 @@
 <template>
-  <div class="flex align-items-start flex-direction-column title-container">
-    <h3 class="title red">
-      {{ title }}
+  <div class="text-left p-20">
+    <h1 class="red m-0 mb-8">{{ title }}</h1>
+    <h3 v-if="role" class="dark font-light m-0 text-sm">
+      Role: {{ role }};
     </h3>
-    <div
-      class="flex flex-direction-column align-items-start subtitle-container"
-    >
-      <span v-if="role" class="subtitle dark"> Role: {{ role }}; </span>
-      <span v-if="author" v-html="author" class="subtitle dark"> </span>
-    </div>
+    <h3
+      v-if="author"
+      v-html="author"
+      class="dark font-light m-0 text-sm"
+    ></h3>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    role: {
-      type: String,
-      required: false,
-    },
-    author: {
-      type: String,
-      required: false,
-    },
-  },
-}
+<script setup lang="ts">
+defineProps<{
+  title: string
+  role?: string
+  author?: string
+}>()
 </script>
-
-<style scoped>
-.title-container {
-  row-gap: 8px;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 38px;
-  margin: 0;
-  text-align: left;
-}
-
-.subtitle-container {
-  row-gap: 4px;
-}
-
-.subtitle {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-@media only screen and (min-width: 768px) {
-  .title {
-    font-size: 30px;
-  }
-
-  .subtitle {
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-</style>

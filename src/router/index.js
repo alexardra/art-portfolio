@@ -3,7 +3,6 @@ import MainPage from '@/views/MainPage.vue'
 import AboutPage from '@/views/AboutPage.vue'
 import WorkPage from '@/views/WorkPage.vue'
 import ProjectPage from '@/views/ProjectPage.vue'
-import ProjectBlockedPage from '@/views/ProjectBlockedPage.vue'
 
 const routes = [
   {
@@ -26,11 +25,6 @@ const routes = [
     path: '/about',
     name: 'About',
     component: AboutPage,
-  },
-  {
-    path: '/work/blocked/:id',
-    name: 'ProjectBlockedPage',
-    component: ProjectBlockedPage,
   },
 ]
 

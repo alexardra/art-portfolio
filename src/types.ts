@@ -8,18 +8,13 @@ export type Project = {
   preview: string
   role: string
   author: string
-  works: Work[]
+  items: WorkItem[]
 }
 
-export type Work = {
+export type WorkItem = {
+  id: string
   type: (typeof workTypesList)[number]
-  details: WorkDetails
-}
-
-export type WorkDetails = {
   src: string
-  width?: number
-  height?: number
 }
 
 export type Theme = (typeof themes)[number]

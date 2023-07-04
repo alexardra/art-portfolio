@@ -1,86 +1,46 @@
 <template>
-  <router-link :to="`/work/${this.id}`">
-    <div
-      class="arrangements-stack outer-p align-items-start h-100 position-relative"
-    >
+  <Link :to="`/work/${id}`">
+    <figure>
       <div class="flex justify-items-center h-100 w-100">
-        <!-- <img
-          class="h-100"
-          :style="`width: auto;`"
-          :alt="preview"
-          :src="`@/assets/previews/${url}`"
-        /> -->
+        <img
+          class="h-100 w-auto"
+          :src="imageUrl"
+          :alt="`View work - ${preview}`"
+        />
       </div>
-      <span class="title">{{ thumbnail }}</span>
-      <img v-if="blocked" class="icon-block" src="@/assets/block.png" />
-    </div>
-  </router-link>
+      <figcaption>{{ thumbnail }}</figcaption>
+    </figure>
+  </Link>
 </template>
 
-<script>
-export default {
-  props: {
-    id: {
-      type: Number,
-      required: true,
-    },
-    url: {
-      type: String,
-      required: true,
-    },
-    preview: {
-      type: String,
-      required: false,
-    },
-    thumbnail: {
-      type: String,
-      required: false,
-    },
-    blocked: {
-      type: Boolean,
-      required: false,
-    },
-  },
-}
+<script setup lang="ts">
+import Link from './Link.vue'
+import { useImage } from '@/composables/useImage'
+
+const props = defineProps<{
+  id: number
+  url: string
+  preview?: string
+  thumbnail?: string
+}>()
+
+const imageUrl = useImage(
+  `/src/assets/previews/${props.url}`
+)
 </script>
 
 <style scoped>
-.title {
+figure {
+  margin: 0;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+figcaption {
   position: absolute;
   bottom: 20px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #242424;
-  font-family: 'aktiv-grotesk-extended', sans-serif;
-}
-
-.icon-block {
-  position: absolute;
-  right: 5px;
-  bottom: 20px;
-  width: 22px;
-  height: 26px;
-}
-
-.outer-p {
-  padding: 5px;
-}
-
-@media only screen and (min-width: 480px) {
-  .outer-p {
-    padding: 20px;
-  }
-
-  .icon-block {
-    right: 20px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1275px) {
-  .title {
-    width: 175px;
-  }
+  margin: 0;
+  padding: 0;
 }
 </style>
