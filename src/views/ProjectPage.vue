@@ -1,16 +1,18 @@
 <script setup lang="ts">
+import WorkMultipleLayout from '@/components/layouts/WorkMultipleLayout.vue'
+import WorkSingleLayout from '@/components/layouts/WorkSingleLayout.vue'
 import ProjectTitle from '@/components/ProjectTitle.vue'
 import ProjectWorkItem from '@/components/ProjectWorkItem.vue'
 import ProjectDescription from '@/components/ProjectDescription.vue'
 import ProjectNavigation from '@/components/ProjectNavigation.vue'
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import type { Project } from '@/types'
 
 const props = defineProps<{
   projectId: string
 }>()
 
-const project = ref<Project | undefined>()
+const project = ref<Project>()
 
 onMounted(async () => {
   const response = await fetch('/projects.json')
@@ -20,50 +22,45 @@ onMounted(async () => {
     (p) => p.id === Number(props.projectId)
   )
 })
+
+const layoutComponent = computed(() => {
+  if (!project) return null
+
+  return project.value?.items.length === 1
+    ? WorkSingleLayout
+    : WorkMultipleLayout
+})
 </script>
 
 <template>
-  <div v-if="project" class="flex m-20 flex-col">
-    <div class="grid border-dark w-100">
+  <component
+    v-if="layoutComponent && project"
+    :is="layoutComponent"
+  >
+    <template #title>
       <ProjectTitle
-        class="grid-item"
         :title="project.title"
         :role="project.role"
         :author="project.author"
       />
-      <ProjectWorkItem
-        v-for="item in project.items"
-        class="grid-item"
-        :key="item.id"
-        :item="item"
-      />
+    </template>
+    <template #description v-if="project.description">
       <ProjectDescription
-        v-if="project.description"
-        class="grid-item"
         :description="project.description"
       />
-    </div>
-    <ProjectNavigation
-      :current="project.id"
-      :pageCount="8"
+    </template>
+
+    <ProjectWorkItem
+      v-for="item in project.items"
+      :key="item.id"
+      :item="item"
     />
-  </div>
+
+    <template #navigation>
+      <ProjectNavigation
+        :current="project.id"
+        :pageCount="8"
+      />
+    </template>
+  </component>
 </template>
-
-<style scoped lang="scss">
-@import '@/styles/variables.scss';
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.grid-item {
-  flex-basis: 100%;
-}
-
-@media (min-width: $breakpoint-desktop-m) {
-  .grid-item:nth-last-of-type(-n + 2) {
-    flex-basis: 50%;
-  }
-}
-</style>

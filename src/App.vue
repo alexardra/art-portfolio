@@ -1,6 +1,6 @@
 <template>
   <PageWrapper :theme="theme">
-    <div class="w-100 h-100">
+    <div class="w-100 h-100 my-0 mx-auto max-w-14000">
       <MainNavbar />
       <router-view></router-view>
     </div>
@@ -14,7 +14,6 @@ import PageWrapper from './components/PageWrapper.vue'
 import MainNavbar from './components/MainNavbar.vue'
 
 const theme = useTheme()
-console.log(theme)
 </script>
 
 <style>

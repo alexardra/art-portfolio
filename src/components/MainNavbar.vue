@@ -1,10 +1,18 @@
 <template>
-  <header class="outer-p position-relative z-10 w-100">
+  <header
+    class="outer-p position-relative z-10 w-100 h-header"
+  >
     <ul class="flex">
       <li>
         <component :is="logoComponent" />
       </li>
-      <li v-for="item in navbarItems" :key="item.id">
+      <li
+        v-for="(item, index) in navbarItems"
+        :key="item.id"
+        :class="{
+          'ml-auto': index === navbarItems.length - 1,
+        }"
+      >
         <MainNavbarItem v-bind="item" />
       </li>
     </ul>
