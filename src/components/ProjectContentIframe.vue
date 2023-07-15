@@ -7,7 +7,7 @@
         height: `${height + 2}px`,
       }"
     >
-      <Spinner v-if="!loaded" />
+      <LoadingSpinner v-if="!loaded" />
       <iframe
         v-show="loaded"
         frameborder="0"
@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import Spinner from './Spinner.vue'
+import LoadingSpinner from './LoadingSpinner.vue'
 import { ref } from 'vue'
 
 type Props = {

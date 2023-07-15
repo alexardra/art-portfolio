@@ -1,6 +1,6 @@
 <template>
-  <div class="text-left p-20">
-    <h1 class="red m-0 mb-8">{{ title }}</h1>
+  <div class="w-full text-left py-4">
+    <h1 class="red m-0 mb-2">{{ title }}</h1>
     <h3 v-if="role" class="dark font-light m-0 text-sm">
       Role: {{ role }};
     </h3>

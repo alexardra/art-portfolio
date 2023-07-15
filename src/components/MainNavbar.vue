@@ -1,8 +1,6 @@
 <template>
-  <header
-    class="outer-p position-relative z-10 w-100 h-header"
-  >
-    <ul class="flex">
+  <header class="p-4 relative z-10 w-full h-[60px]">
+    <ul class="flex list-none p-0 m-0">
       <li>
         <component :is="logoComponent" />
       </li>
@@ -63,12 +61,3 @@ const logoComponent = computed(() => {
   }[theme.value]
 })
 </script>
-
-<style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-</style>

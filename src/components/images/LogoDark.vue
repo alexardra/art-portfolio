@@ -1,30 +1,17 @@
 <template>
-  <router-link to="/">
+  <router-link
+    to="/"
+    class="block w-[35px] h-[15px] md:w-[60px] md:h-[20px]"
+  >
     <Suspense>
-      <img class="logo" src="@/assets/logo-dark.svg" alt="Logo" />
+      <img
+        class="w-full h-full"
+        src="@/assets/logo-dark.svg"
+        alt="Logo"
+      />
       <template #fallback>
-        <div class="logo"></div>
+        <div class="w-full h-full"></div>
       </template>
     </Suspense>
   </router-link>
 </template>
-
-<style scoped lang="scss">
-@mixin change($w, $h) {
-  .logo {
-    width: $w;
-    height: $h;
-  }
-}
-// @include change($w: 35px, $h: 15px);
-
-// $w-logo: 35px;
-// $h-logo: 15px;
-
-// $w-logo: 60px;
-// $h-logo: 20px;
-
-// @media only screen and (min-width: 600px) {
-@include change($w: 60px, $h: 20px);
-// }
-</style>

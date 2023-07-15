@@ -1,12 +1,15 @@
 <template>
   <div
-    class="flex nav-item items-center"
-    :class="{ 'nav-item-active': active }"
+    class="flex pl-[36px] items-center"
+    :class="{ 'pl-[18px]': active }"
   >
-    <i v-if="active" class="i-active"></i>
+    <i
+      v-if="active"
+      class="mx-1 w-[10px] h-[10px] bg-no-repeat bg-star-icon"
+    ></i>
     <Link
       :to="to"
-      active-class="font-bold red"
+      active-class="font-bold text-red"
       :class="linkClasses"
     >
       {{ title }}
@@ -35,25 +38,7 @@ const active = computed(() => {
 const linkClasses = computed(() => {
   return [
     props.bold ? 'font-bold' : '',
-    theme.value === 'light' ? 'dark' : 'light',
+    theme.value === 'light' ? 'text-dark' : 'text-light',
   ]
 })
 </script>
-
-<style scoped lang="scss">
-.nav-item {
-  padding-left: 36px;
-}
-
-.nav-item-active {
-  padding-left: 18px;
-}
-
-.i-active {
-  background-image: url('@/assets/star-icon.svg');
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 10px;
-  margin: 0 4px;
-}
-</style>

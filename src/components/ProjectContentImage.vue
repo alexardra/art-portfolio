@@ -1,5 +1,5 @@
 <template>
-  <img :src="imageUrl" class="w-100" alt="Project work" />
+  <img :src="imageUrl" class="w-full" alt="Project work" />
 </template>
 
 <script setup lang="ts">

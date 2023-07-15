@@ -1,5 +1,5 @@
 <template>
-  <div class="p-20">
+  <div class="py-4">
     <p
       class="m-0 text-base text-left"
       v-html="description"

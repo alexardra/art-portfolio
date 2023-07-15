@@ -1,7 +1,7 @@
 <template>
-  <main class="mx-20">
+  <main class="mx-4">
     <div class="flex flex-wrap border-dark">
-      <slot name="title"> </slot>
+      <slot name="title"></slot>
       <slot></slot>
 
       <slot name="description"></slot>

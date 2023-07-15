@@ -1,23 +1,12 @@
 <template>
   <Suspense>
-    <div class="content bg">
+    <div class="w-full h-screen bg-dark-cover">
       <slot></slot>
     </div>
     <template #fallback>
-      <div class="content bg-fallback">
+      <div class="h-[calc(100vh-60px)] bg-dark">
         <slot></slot>
       </div>
     </template>
   </Suspense>
 </template>
-
-<style scoped>
-.content {
-  width: 100%;
-  height: 100%;
-}
-
-.bg-fallback {
-  background-color: #2d2d2c;
-}
-</style>

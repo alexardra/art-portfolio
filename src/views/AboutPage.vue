@@ -1,85 +1,44 @@
 <template>
-  <div class="bg-inherit flex justify-items-center items-center content">
-    <div class="flex">
-      <img class="avatar" src="@/assets/about-me-avatar.webp" />
-      <div class="flex flex-col red text">
-        <div class="flex">
-          <h1 class="m-0">Ani</h1>
-          <h3 class="m-0">(she/they)</h3>
-        </div>
-        <p class="m-0 text-left">
-          I am an Art Director. I have a background in graphic design and
-          illustration. I have never-ending ideas about anything. I am inspired
-          by music, film, fashion, and all kinds of art, most notably by
-          connections (aka my friends). I've always felt like a misfit all my
-          life, but now I am starting to accept the cringe and lean confidently
-          into my awkwardnes. I am a maladaptive daydreamer, which is not always
-          fun but it's super useful in the creative industry. Anyways here is my
-          <span>
-            <a href="/Ani_Barbakadze_CV.pdf" target="_blank">CV.</a>
-          </span>
-        </p>
+  <div
+    class="w-full h-[calc(100vh-60px)] max-w-screen-lg mx-auto flex items-center justify-center gap-8 px-4"
+  >
+    <img
+      class="max-w-[100px] h-auto"
+      src="@/assets/about-me-avatar.webp"
+    />
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-row items-center gap-3">
+        <h1 class="text-red font-bold text-6xl">Ani</h1>
+        <h3 class="text-red font-semibold text-3xl">
+          (she/they)
+        </h3>
       </div>
+      <p class="text-left text-red">
+        <span class="inline-block mb-2">
+          I am an Art Director. I have a background in
+          graphic design and illustration.
+        </span>
+        <span class="inline-block mb-2">
+          I have never-ending ideas about anything. I am
+          inspired by music, film, fashion, and all kinds of
+          art, most notably by human connections
+          <span class="italic"> (aka my friends). </span>
+        </span>
+        <span class="inline-block mb-2">
+          I've always felt like a misfit all my life, but
+          now I am starting to accept the cringe and lean
+          confidently into my awkwardness.
+        </span>
+        <span class="inline-block mb-2">
+          Anyways, here is my
+          <a
+            class="font-bold"
+            href="/Ani_Barbakadze_CV.pdf"
+            target="_blank"
+            >CV.</a
+          >
+        </span>
+      </p>
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-@import '@/styles/variables.scss';
-
-$w-xs: 70px;
-$w-s: 100px;
-$w-m: 120px;
-$w-l: 135px;
-
-$w-text-xs: 250px;
-$w-text-s: 360px;
-$w-text-m: 400px;
-$w-text-l: 440px;
-
-$font-size-text-xs: 20px;
-$font-size-text-s: 20px;
-$font-size-text-m: 20px;
-$font-size-text-l: 20px;
-
-/** temp */
-.content {
-  height: calc(100vh - 60px);
-}
-
-/*** */
-.avatar {
-  width: $w-xs;
-}
-
-.text {
-  width: $w-text-xs;
-}
-
-@media only screen and (min-width: $breakpoint-mobile-m) {
-  .avatar {
-    width: $w-s;
-  }
-  .text {
-    width: $w-text-s;
-  }
-}
-
-@media only screen and (min-width: $breakpoint-mobile-l) {
-  .avatar {
-    width: $w-m;
-  }
-  .text {
-    width: $w-text-m;
-  }
-}
-
-@media only screen and (min-width: $breakpoint-tablet) {
-  .avatar {
-    width: $w-l;
-  }
-  .text {
-    width: $w-text-l;
-  }
-}
-</style>

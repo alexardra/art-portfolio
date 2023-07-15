@@ -1,5 +1,5 @@
 <template>
-  <video :key="src" controls class="w-100 h-100">
+  <video :key="src" controls class="w-full h-full">
     <source :src="url" type="video/mp4" />
     Your browser does not support HTML video.
   </video>

@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-between py-20">
+  <div class="flex justify-between py-4">
     <button
       @click="goToPrev"
-      class="dark text-lg font-bold"
+      class="hover:opacity-80 focus:outline-none disabled:cursor-not-allowed disabled:opacity-70 shadow-sm rounded-md text-dark text-lg font-bold"
       type="submit"
       :disabled="prevDisabled"
     >
@@ -10,7 +10,7 @@
     </button>
     <button
       @click="goToNext"
-      class="dark text-lg font-bold"
+      class="hover:opacity-80 focus:outline-none disabled:cursor-not-allowed disabled:opacity-70 shadow-sm rounded-md text-dark text-lg font-bold"
       type="submit"
       :disabled="nextDisabled"
     >
@@ -42,20 +42,3 @@ const goToNext = () => {
   router.push(`/work/${props.current + 1}`)
 }
 </script>
-
-<style scoped>
-button {
-  outline: none;
-  background: inherit;
-  border: 0;
-  padding: 0;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-button:disabled {
-  color: #bfbebe;
-}
-</style>

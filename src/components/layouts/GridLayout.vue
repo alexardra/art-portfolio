@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-wrap p-20">
+  <main class="flex flex-wrap p-4">
     <div
       class="col col-top"
       :class="{
@@ -82,8 +82,14 @@ const onMouseout = () => {
 </script>
 
 <style scoped lang="scss">
-@import '@/styles/variables.scss';
+$red: #ff6666;
+$dark: #242424;
 
+$breakpoint-mobile-m: 480px;
+$breakpoint-mobile-l: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop-m: 992px;
+$breakpoint-desktop-l: 1200px;
 .col {
   flex-basis: calc(100% - 4px);
   height: 350px;
@@ -102,10 +108,6 @@ const onMouseout = () => {
 }
 
 @media (min-width: $breakpoint-desktop-m) {
-  main {
-    height: calc(100vh - $h-header);
-  }
-
   .col {
     flex: 1 0 25%;
     height: 50%;
