@@ -1,6 +1,11 @@
 <template>
-  <Link :to="`/work/${id}`">
-    <figure class="m-0 h-full p-4 relative">
+  <Link
+    :to="`/work/${id}`"
+    class="block min-h-[350px] w-100"
+  >
+    <figure
+      class="block min-h-[350px] w-100 m-0 p-4 relative"
+    >
       <div class="flex justify-items-center h-full w-full">
         <img
           class="h-full w-auto"

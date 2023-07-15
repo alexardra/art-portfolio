@@ -1,5 +1,5 @@
 <template>
-  <div class="p-20">
+  <div class="py-4">
     <div
       class="flex border-dark items-center justify-items-center"
       :style="{

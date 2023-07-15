@@ -35,10 +35,10 @@ const nextDisabled = computed(
   () => props.current === props.pageCount
 )
 
-const goToPrev = () => {
-  router.push(`/work/${props.current - 1}`)
+const goToPrev = async () => {
+  await router.push(`/work/${props.current - 1}`)
 }
-const goToNext = () => {
-  router.push(`/work/${props.current + 1}`)
+const goToNext = async () => {
+  await router.push(`/work/${props.current + 1}`)
 }
 </script>

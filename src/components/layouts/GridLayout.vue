@@ -92,7 +92,7 @@ $breakpoint-desktop-m: 992px;
 $breakpoint-desktop-l: 1200px;
 .col {
   flex-basis: calc(100% - 4px);
-  height: 350px;
+  min-height: 350px;
   margin: 2px;
   border: 1px solid $dark;
 }
