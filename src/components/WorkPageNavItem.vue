@@ -4,8 +4,8 @@
       <div class="flex justify-items-center h-100 w-100">
         <img
           class="h-100 w-auto"
+          alt="Work thumbnail"
           :src="imageUrl"
-          :alt="`View work - ${preview}`"
         />
       </div>
       <figcaption>{{ thumbnail }}</figcaption>
@@ -19,13 +19,12 @@ import { useImage } from '@/composables/useImage'
 
 const props = defineProps<{
   id: number
-  url: string
-  preview?: string
+  preview: string
   thumbnail?: string
 }>()
 
 const imageUrl = useImage(
-  `/src/assets/previews/${props.url}`
+  `/src/assets/previews/${props.preview}`
 )
 </script>
 

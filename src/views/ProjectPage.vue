@@ -7,6 +7,7 @@ import ProjectDescription from '@/components/ProjectDescription.vue'
 import ProjectNavigation from '@/components/ProjectNavigation.vue'
 import { computed, onMounted, ref } from 'vue'
 import type { Project } from '@/types'
+import { useProjects } from '@/composables/useProjects'
 
 const props = defineProps<{
   projectId: string
@@ -15,12 +16,14 @@ const props = defineProps<{
 const project = ref<Project>()
 
 onMounted(async () => {
-  const response = await fetch('/projects.json')
-  const file: Project[] = await response.json()
-
-  project.value = file.find(
+  const projects = await useProjects()
+  project.value = projects.find(
     (p) => p.id === Number(props.projectId)
   )
+
+  if (!project.value) {
+    //oops could not find
+  }
 })
 
 const layoutComponent = computed(() => {
