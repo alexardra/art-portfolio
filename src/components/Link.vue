@@ -32,7 +32,7 @@ export default {
   inheritAttrs: false,
 
   props: {
-    // add @ts-ignore if using TypeScript
+    //@ts-ignore
     ...RouterLink.props,
     inactiveClass: String,
   },
